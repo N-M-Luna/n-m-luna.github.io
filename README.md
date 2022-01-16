@@ -1,2 +1,2 @@
 # n-m-luna.github.io
-Online Resume for a Full Stack Web Developer
+Personal Page for Nathalie M. Luna
