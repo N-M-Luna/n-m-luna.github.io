@@ -1,0 +1,152 @@
+
+/* General tags */
+
+hr {
+  margin: 45px auto;
+  width: 75%;
+}
+
+a {
+  color: teal;
+  text-decoration: none;
+}
+
+a:hover {
+  color: teal;
+  text-decoration: underline;
+}
+
+.section {
+  margin: auto;
+  width: 75%;
+}
+
+.end-of-section {
+  padding-bottom: 20px;
+}
+
+/* section headings*/
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* Back-to-top button */
+.BTTbtn{
+  background-color: #008080;
+  border: none;
+  border-radius: 100% 100% 0 0;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 0;
+  opacity: .5;
+  outline: none;
+  padding: 10px 15px 5px;
+  position: absolute;
+  right: 15%;
+}
+
+.BTTbtn:hover {
+  color: white;
+  opacity: 1;
+}
+
+
+
+/* Navigational Bar */
+.myNavi {
+  background-color: white;
+  box-shadow: 0 5px 5px white;
+}
+
+.navbar-brand {
+  color: black;
+}
+
+.navi-link {
+  color: teal;
+  text-decoration: none;
+}
+
+.navi-link:hover {
+  color: teal;
+  text-decoration: underline;
+}
+
+/* ADD: When user clicks on a navbar, toggle the navbar-toggler button.  */
+
+
+/* Headline Section */
+.profile-pic {
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto 30px;
+  width: 200px;
+}
+
+.headline-section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+  width: 40%;
+}
+
+@media (max-width: 700px) {
+  .headline-section {
+    width: 55%;
+  }
+}
+
+
+
+/* Skills section */
+.skill-badge:hover {
+  opacity: .5;
+}
+
+
+
+/* Research Section */
+.accordion-button {
+  color: teal;
+}
+
+.accordion-item {
+  border-style: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button[aria-expanded="true"] {
+  background-color: inherit;
+  color: teal;
+}
+
+
+
+/* Text sections: Education, Experience, Research, Hobbies */
+
+h5 {
+  padding-top: 40px;
+}
+
+
+
+/* Contact Section */
+
+.contact-menu {
+  text-align: center;
+}
+
+.social-icon {
+  opacity: 0.6;
+  padding: 10px 5px 200px;
+  width: 64px;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
