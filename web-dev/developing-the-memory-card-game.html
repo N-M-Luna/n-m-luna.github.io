@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags -->
+  <meta charset="utf-8">
+  <meta name="description" content="Developer Blog. Implementation of a card game.">
+  <meta name="keywords" content="Developer Blog">
+  <meta name="author" content="N. M. Luna">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tab Title -->
+  <title> /* Note to Self */ Developing the Memory Card Game </title>
+
+  <!-- CSS Style -->
+  <link rel="stylesheet" href="css/dev-blog-style.css">
+
+  <!-- Font Awesome cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- TITLE BAR -->
+  <div class="title-bar">
+    <h1 class="title">/* Note to Self */</h1>
+  </div>
+
+  <!-- BREADCRUMB TRAIL -->
+  <div class="breadcrumb-trail">
+    <p>
+      Back to:
+      <a href="https://n-m-luna.github.io"> N. M. Luna </a> /
+      <a href="https://n-m-luna.github.io/dev-blog"> Dev Blog </a> /
+      Developing the Memory Card Game
+    </p>
+  </div>
+
+  <!-- Navigational buttons: TOC BUTTON and BACK-TO-TOP BUTTON -->
+  <button class="nav-btn toc-btn" type="button"><span class="fa-solid fa-bars"></span></button>
+  <button class="nav-btn back-to-top-btn" type="button"><span class="fa-solid fa-arrow-up"></span></button>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc hidden">
+    <h3 class="toc-title"> <a class="toc-link" href="#">Developing the Memory Card Game</a></h3>
+
+    <ol>
+      <li>// <a class="toc-link" href="#motivation">Motivation</a></li>
+      <li>// <a class="toc-link" href="#game-play">Game Play</a></li>
+    </ol>
+  </div>
+
+  <!-- ARTICLE -->
+  <div class="article">
+    <h2 class="article-title">Developing the Memory Card Game</h2>
+    <p class="language-line"> <span class="language-dot"></span> HTML <span class="language-dot"></span> CSS <span class="language-dot"></span> JS</p>
+
+    <h3 class="article-section" id="motivation">Motivation </h3>
+
+    <p>The Memory card game is an entertaining way to exercise and improve your memory skills. It's also known as Concentration, Match up, or Pairs.</p>
+
+    <p>I'm developing a <strong>single-page web application</strong> that emulates a one-player game of Memory. The page is built using <strong>vanilla HTML and CSS</strong>. The game logic and page behavior is implemented using <strong>JavaScript</strong>.</p>
+
+    <p>I'm proposing this project as <strong>an exercise in web development</strong>. I'm writing this developer blog to record my approach to the programming challenges I'll encounter in this project and my method for building the front end of a web application from scratch. </p>
+
+    <p>The references I'm using are <a href="https://w3schools.com">W3Schools</a> and <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>.</p>
+
+    <h3 class="article-section" id="game-play">Game play</h3>
+
+    <p>To start the game, a deck of eight to 36 pairs of identical cards are shuffled and laid face down. The goal of the game is to <strong>find matching pairs of cards</strong> in the least amount of turns.</p>
+
+    <p>In each turn, the player flips two cards face up. If they match, the cards are solved and remain facing up. If they don't, the cards are flipped over and the player tries again.</p>
+
+    <!-- Add videoclip of 1-2 whole turns -->
+
+    <p>The game ends when all the cards have been solved. The score is the number of turns the player took to finish the game. The less turns, i.e., the lower the number, the better the score.</p>
+
+  </div> <!-- end article -->
+
+  <footer>
+    <p class="copyright">&copy; 2022 N. M. Luna</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="text/javascript" src="js/dev-blog.js" charset="utf-8"></script>
+</body>
+
+</html>
