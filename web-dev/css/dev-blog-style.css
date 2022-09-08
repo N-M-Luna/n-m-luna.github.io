@@ -1,0 +1,156 @@
+/* CSS for the developer blog
+
+Color scheme:
+  white
+  darkolivegreen
+*/
+/* These margins will help to guide the eyes. */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+div, footer {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* TO DO: Change when viewscreen changes width (less in smaller screens, a cap for larger ones) */
+/* The title of the website is "Note to Self". */
+.title-bar {
+  background-color: darkolivegreen;
+  color: white;
+  margin: 0;
+  padding: 30px 0 30px 15%;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 100px;
+  margin-bottom: 75px;
+}
+
+/* Introduction to the website*/
+.introduction-section {
+  margin-top: 100px;
+}
+
+.greeting {
+  font-family: cursive;
+  color: darkolivegreen;
+  font-size: 1.25rem;
+}
+
+.introduction {
+  line-height: 1.5;
+}
+
+/* Articles's elements that are in both index and article pages */
+.language-dot {
+  height: 13px;
+  width: 13px;
+  background-color: darkolivegreen;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* The article's preview is displayed on the dev blog index. */
+.article-preview {
+  padding-top: 50px;
+}
+
+.article-link {
+  font-size: 2rem;
+}
+
+a {
+  color: darkolivegreen;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.article-description {
+  line-height: 1.7;
+}
+
+/* Article pages will have a table of contents */
+.toc {
+  background-color: darkolivegreen;
+  color: white;
+  position:fixed;
+  top: 0;
+  margin-left: 0;
+  padding-left: 15%;
+  width: 85%;
+}
+
+.toc-title {
+  padding-left: 2%;
+}
+
+.toc-link {
+  color: white;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-btn {
+  background-color: darkolivegreen;
+  color: white;
+  border: none;
+  padding: 10px;
+  position: fixed;
+  top: 10%;
+  font-size: 1.5rem;
+  border-radius: 15%;
+  z-index: 1;
+}
+
+.nav-btn:hover {
+  background-color: white;
+  color: darkolivegreen;
+}
+
+.toc-btn {
+  left: 5%;
+}
+
+/* Back to top button */
+.back-to-top-btn {
+  right: 5%;
+}
+
+/* The article, aka le piece de resistance */
+.article-title {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.language-line {
+  margin-top: 0;
+}
+
+.article {
+  line-height: 1.7;
+}
+
+.article-section {
+  font-size: 1.75rem;
+  margin-top: 75px;
+  margin-bottom: 60px;
+}
