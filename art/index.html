@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Meta tags -->
+  <meta charset='utf-8'>
+  <meta name='description' content='Art of N. M. Luna'>
+  <meta name='author' content='Nathalie M. Luna Rivera'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title> Art of N. M. Luna </title>
+
+  <!-- Custom CSS -->
+  <link rel='stylesheet' href='artStyle.css'>
+
+  <!-- Font awesome -->
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.0.13/css/all.css'>
+</head>
+
+<body>
+
+    <!-- Name and search bar -->
+    <div id='main-bar'>
+        <span id='name'>N. M. Luna</span> <div id='search-bar'><i class='fa-solid fa-magnifying-glass'></i></div>
+    </div>
+
+    <!-- Nav bar -->
+    <div id='top-navigation'>
+        <a id='home-link' onclick='activate(home-link)' class='active' href=''>Home</a>
+        <a id='catalogue-link' onclick='activate(catalogue-link)'  href=''>Artist Calatolgue</a>
+        <a id='archive-link' onclick='activate(archive-link)' href=''>Archive</a>
+        <a id='about-link' onclick='activate("about-link")' href=''>About</a>
+        <a id='contact-link' onclick='activate(contact-link)' href=''>Contact</a>
+        <a id='blog-link' onclick='activate(blog-link)' href=''>Blog</a>
+    </div>
+
+    <!-- Intro/About the artist-->
+    <div id='intro'>
+        <p>
+            I'm Luna, creator of watercolor-and-ink illustrations. <br> Science fiction, math, tattoos, and dancing are other interests which find their way to my art.<br> I was born in Puerto Rico, but am currently based in Northern California. <br> <a onclick='activate(about-link)' href=''>Click here to learn more about me.</a>
+        </p>
+    </div>
+
+    <hr>
+    <!-- Preview of my art -->
+    <div id='art-at-a-glance'>
+        <p>My favorite mediums to combine are watercolors and ink outlines.</p>
+        <div class='art-card-holder'>
+            <div class='med-art-card'>
+                <img src="scans/2021throatpunch.jpeg" alt="Throat Punch">
+                <p class='copyrightP'>Throat Punch © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='med-art-card'>
+                <img src="scans/2024theElfWithTheDragonTattoo.jpeg" alt="The Elf with the Dragon Tattoo">
+                <p class='copyrightP'>The Elf with the Dragon Tattoo © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+
+    <hr>
+        <p>Sometimes, I use solely watercolors for their soft edges and suggestive shapes.</p>
+        <div class='art-card-holder'>
+            <div class='sm-art-card'>
+                <img src="scans/2023theForestScene.jpeg" alt="The Forest Scene">
+                <p class='copyrightP'>The Forest Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='sm-art-card'>
+                <img src="scans/2023theRobotTrainStationScene.jpeg" alt="The Robot Train Station Scene">
+                <p class='copyrightP'>The Robot Train Station Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='sm-art-card'>
+                <img src="scans/2023royalty.jpeg" alt="Royalty">
+                <p class='copyrightP'>Royalty © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+
+    <hr>
+        <p>I love making space babes! They combine two of my favorite things: science fiction and pinups.</p>
+        <div class='art-card-holder'>
+            <div class='med-art-card'>
+                <img src="scans/2021sallySupernova.jpeg" alt="Sally Supernova">
+                <p class='copyrightP'>Sally Supernova © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='med-art-card'>
+                <img src="scans/2023starTease.jpeg" alt="Star Tease">
+                <p class='copyrightP'>Star Tease © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+        <div class='art-card-holder'>
+            <div class='med-art-card'>
+                <img src="scans/2021daphne.jpeg" alt="Daphne">
+                <p class='copyrightP'>Daphne © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='med-art-card'>
+                <img src="scans/2021velma.jpeg" alt="Velma">
+                <p class='copyrightP'>Velma © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+
+    <hr>
+        <p>Dance is one of my inspiration sources.</p>
+        <div class='art-card-holder'>
+            <div class='med-art-card'>
+                <img src="scans/2023laBailarina.jpeg" alt="La Bailarina">
+                <p class='copyrightP'>La Bailarina © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='med-art-card'>
+                <img src="scans/2023theRoaringDancer.jpeg" alt="The Roaring Dancer">
+                <p class='copyrightP'>The Roaring Dancer © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+
+    <hr>
+        <p>Another hobby that pops up in my art is traditional American tattoos.</p>
+        <div class='art-card-holder'>
+            <div class='sm-art-card'>
+                <img src="scans/2023tattooedPinupNo2.jpeg" alt="Tattooed Pinup No. 2">
+                <p class='copyrightP'>Tattooed Pinup No. 2 © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='sm-art-card'>
+                <img src="scans/2024cortanaFlashNo1.jpeg" alt="Cortana Flash No. 1">
+                <p class='copyrightP'>Cortana Flash No. 1 © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+            <div class='sm-art-card'>
+                <img src="scans/2023beetleguiseFlash.jpeg" alt="Beetleguise Flash">
+                <p class='copyrightP'>Beetleguise Flash © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a> </p>
+            </div>
+        </div> <!--art-card-holder-->
+    </div>
+
+</body>
+<script src='https://kit.fontawesome.com/5721503876.js' crossorigin='anonymous'></script>
+<script src='index.js'></script>
+</html>

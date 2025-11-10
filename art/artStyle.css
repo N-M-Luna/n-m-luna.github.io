@@ -1,0 +1,118 @@
+/*
+Color scheme:
+ Dark blue #0d4771
+*Pale Blue #445881
+*Purple #7b6992
+ Pink #b17aa2
+ Fuschia #e88bb3
+
+*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+hr {
+    border: 1px solid #445881;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+a {
+    color: #7b6992;
+}
+p {
+    font-size: 18px;
+}
+
+#main-bar {
+  font-size: 20px;
+    padding: 14px 16px;
+    position: relative;
+}
+#search-bar {
+    position: absolute;
+    top: 14px;
+    right: 5px;
+}
+/* TODO On small screens, make #search-bar position: static */
+
+#top-navigation {
+  background-color: #445881;
+  margin: 0px;
+  overflow: hidden;
+}
+#top-navigation a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#top-navigation a.active {
+  background-color: #7b6992;
+  color: white;
+}
+#top-navigation a:hover {
+  background-color: white;
+  color: black;
+}
+
+#intro {
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#art-at-a-glance {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+.art-card-holder {
+    display: flex;
+}
+.med-art-card {
+  width: 40%;
+  padding: 5px;
+}
+.med-art-card img {
+    width: 100%;
+}
+.sm-art-card {
+  width: 33%;
+  padding: 5px;
+}
+.sm-art-card img {
+    width: 100%;
+}
+.copyrightP {
+    color: #444444;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 650px) {
+  .med-art-card {
+    width: 90%;
+    display: block;
+  }
+  .sm-art-card {
+    width: 90%;
+    display: block;
+  }
+  .art-card-holder {
+    display: block;
+}
+}
+/*
+TODO later
+- Add functionality to search bar
+- Add color changing features to top-navigation
+- Center divs with images
+- Re-write everything
+- Make contact page
+- Make archive
+- Write about
+- Make catalogue
+- Write blog for seo
+*/

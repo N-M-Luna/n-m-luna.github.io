@@ -131,3 +131,6 @@ dist
 
 .DS_Store
 img/.DS_Store
+
+# Personal notes
+todoList.md
