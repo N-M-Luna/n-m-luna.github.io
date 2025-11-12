@@ -3,110 +3,177 @@ Color scheme:
  Dark blue #0d4771
 *Pale Blue #445881
 *Purple #7b6992
- Pink #b17aa2
+*Pink #b17aa2
  Fuschia #e88bb3
+ white
+ darkgrey
+ black
 
 */
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0px auto;
-    max-width: 1200px;
+  align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0px auto;
+  max-width: 1100px;
+  text-align: center;
 }
+
 hr {
-    border: 1px solid #445881;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  border: 1px solid #445881;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  width: 80%;
 }
+
 a {
-    color: #7b6992;
-}
-p {
-    font-size: 18px;
+  color: #7b6992;
 }
 
 #main-bar {
-  font-size: 20px;
-    padding: 14px 16px;
-    position: relative;
+  font-size: 24px;
+  margin-top: 80px;
+  padding: 14px 16px;
+  position: relative;
+  text-align: left;
 }
+
 #search-bar {
-    position: absolute;
-    top: 14px;
-    right: 5px;
+  position: absolute;
+  top: 14px;
+  right: 5px;
 }
-/* TODO On small screens, make #search-bar position: static */
 
 #top-navigation {
   background-color: #445881;
   margin: 0px;
   overflow: hidden;
 }
+
 #top-navigation a {
   float: left;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
 }
+
 #top-navigation a.active {
   background-color: #7b6992;
   color: white;
 }
+
 #top-navigation a:hover {
   background-color: white;
   color: black;
 }
 
-#intro {
-    align-items: center;
-    text-align: center;
-    padding-top: 20px;
+.artist-intro {
+  padding-top: 20px;
+}
+
+.artist-intro p {
+  font-size: 20px;
+  margin: 200px auto 100px auto;
+  width: 80%;
 }
 
 #art-at-a-glance {
-    align-items: center;
-    text-align: center;
-    width: 100%;
+  width: 100%;
 }
+
+.intro  {
+  font-size: 24px;
+  margin: 80px auto;
+  width: 80%;
+}
+
 .art-card-holder {
-    display: flex;
+  margin: auto;
 }
-.med-art-card {
+
+.art-card {
+  display: inline-block;
+  padding: 5px;
+}
+
+.med {
   width: 40%;
-  padding: 5px;
 }
-.med-art-card img {
-    width: 100%;
+
+.sm {
+  width: 30%;
 }
-.sm-art-card {
-  width: 33%;
-  padding: 5px;
+
+.art-card img {
+  width: 100%;
 }
-.sm-art-card img {
-    width: 100%;
-}
+
 .copyrightP {
-    color: #444444;
-    font-size: 12px;
+  color: darkgray;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 650px) {
-  .med-art-card {
-    width: 90%;
-    display: block;
-  }
-  .sm-art-card {
-    width: 90%;
-    display: block;
-  }
   .art-card-holder {
     display: block;
+  }
+  .art-card {
+    display: block;
+    margin: auto;
+  }
+  .sm, .med {
+    width: 75%;
+  }
 }
+
+footer {
+  background-color: #445881;
+  color: white;
+  margin-bottom: 0px;
+  margin-top: 75px;
+  padding-bottom: 70px;
+}
+
+footer p {
+  padding-top: 100px;
+}
+
+footer a {
+  color: #b17aa2;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.contact-icon {
+  display: inline;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.l-icons {
+  width: 30px;
+}
+
+#back-to-top-btn {
+  background-color: transparent;
+  border-width: 0px;
+  bottom: 5%;
+  color:#445881;
+  font-size: 18px;
+  position: fixed;
+  right: 2.5%;
+}
+
+#back-to-top-btn:hover {
+  color: #7b6992;
 }
 /*
 TODO later
-- Add functionality to search bar
+- Add a footer
+- Add functionality to search bar (On small screens, make it position: static
 - Add color changing features to top-navigation
 - Center divs with images
 - Re-write everything
