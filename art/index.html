@@ -30,10 +30,11 @@
         <a id='home-link' href='#' class='active' onclick='goHome()'><i class='fa-solid fa-house-chimney'></i></a>
         <p id='current-tab'> / Home </p>
         <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
-        <a id='contact-link' href='#' class='nav-anchor' onclick='activate("contact-link")'>Contact</a>
+        <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link")'>Archive</a>
+        <a id='shop-link' href='#' class='nav-anchor' onclick='activate("shop-link")'>Shop</a>
         <a id='about-link' href='#' class='nav-anchor' onclick='activate("about-link")'>About</a>
         <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link")'>Blog</a>
-        <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link")'>Archive</a>
+        <a id='contact-link' href='#' class='nav-anchor' onclick='activate("contact-link")'>Contact</a>
         <a id='menu-icon' href='javascript:void(0);' onclick='toggleMobileMenu()'>
             <i class='fa-solid fa-bars'></i>
         </a>
@@ -137,7 +138,7 @@
 
     <!------------ Start Catalogue Content ------------>
     <section id='catalogue-content' class='hidden'>
-        <p>This is my statement.</p>
+        <p>Here is a collection of painting that have some common thread. This is a 2-3 sentence explanation of what that thread is.</p>
         <p>And this is my art.</p>
     </section><!--End Catalogue Content-->
 
@@ -146,8 +147,9 @@
         <p>This is the archive of all my art.</p>
 
         <hr>
-        2025 - Brief description here
-        ...
+        <p class='year-summary'>2025 - Brief description here
+        ...</p>
+        <div class='gallery'>And here are my paintings.</div>
     </section><!--End Archive Content-->
 
     <!------------ Start About Content ------------>
@@ -165,14 +167,40 @@
         <p>This is how you can reach me.</p>
     </section><!--End Contact Content-->
 
+     <!------------ Start About Content ------------>
+    <section id='shop-content' class='hidden'>
+        <p>This is where you can buy prints of my paintings or originals.</p>
+    </section><!--End About Content-->
+
     <button id='back-to-top-btn' onclick='takeMeToTheTop()'><i class="fa-solid fa-up-long"></i></button>
 
     <footer>
-        <p>Thanks for looking!</p>
+        <p>Thanks for looking! <br> <span class='my-name'>N. M. Luna</span> </p>
 
-        <p>Wanna get in touch?</p>
-        <div class='contact-icon'>
-            <a href='mailto:art.by.n.m.luna@gmail.com' traget='_blank'><i class="fa-solid fa-envelope"></i></a></div> <div class='contact-icon'><a href='https://www.instagram.com/some.crafty.cat/' traget='_blank'><i class="fa-brands fa-instagram"></i></a>
+        <div id='where-to-go-now'>
+            <div class='go-here'>
+                <p>Take me to:</p>
+                <a href='#' class='nav-at-foot' onclick='goHome()'>Home</a>
+                <a href='#' class='nav-at-foot' onclick='activate("shop-link")'>Shop</a>
+            </div>
+            <div class='go-here'>
+                <p>Look at art.</p>
+                <a href='#' class='nav-at-foot' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
+                <a href='#' class='nav-at-foot' onclick='activate("archive-link")'>Archive</a>
+            </div>
+            <div class='go-here'>
+                <p>Learn more.</p>
+                <a href='#' class='nav-at-foot' onclick='activate("about-link")'>About</a>
+                <a href='#' class='nav-at-foot' onclick='activate("blog-link")'>Blog</a>
+            </div>
+            <div class='go-here'>
+                <p>Connect.</p>
+                <p class='contact-icon'>
+                    <a href='mailto:art.by.n.m.luna@gmail.com' traget='_blank'><i class="fa-solid fa-envelope"></i></a>
+                </p>
+                <p class='contact-icon'><a href='https://www.instagram.com/some.crafty.cat/' traget='_blank'><i class="fa-brands fa-instagram"></i></a>
+                </p>
+            </div>
         </div>
 
         <p>All works here are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons</a>.</p>

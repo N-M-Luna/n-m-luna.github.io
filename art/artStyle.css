@@ -170,18 +170,14 @@ a {
 
 /* Footer */
 footer {
-  /* align-items: left; */
   background-color: #445881;
   color: white;
   margin-bottom: 0px;
   margin-top: 75px;
-  padding-bottom: 70px;
-  /* text-align: left; */
-}
-footer p {
-  padding-top: 100px;
-  margin: 0px auto 30px auto;
-  width: 80%;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  padding-top: 40px;
+  text-align: left;
 }
 footer a {
   color: #b17aa2;
@@ -190,10 +186,21 @@ footer a {
 footer a:hover {
   color: white;
 }
+#where-to-go-now {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.go-here {
+  width: 150px;
+}
+.nav-at-foot {
+  display: block;
+  font-size: 24px;
+}
 .contact-icon {
   display: inline;
-  font-size: 30px;
-  padding: 10px;
+  font-size: 35px;
 }
 .l-icons {
   width: 30px;
@@ -209,4 +216,5 @@ TODO later
 - Write about
 - Make catalogue
 - Write blog for seo
+- Make my name in footer render in cursive font
 */
