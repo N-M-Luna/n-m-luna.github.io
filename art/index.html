@@ -23,115 +23,147 @@
 <body>
 
     <!-- Name and search bar -->
-    <div id='main-bar'>
-        <span id='name'>N. M. Luna</span> <div id='search-bar'><i class='fa-solid fa-magnifying-glass'></i></div>
-    </div>
+    <div id='main-bar'> N. M. Luna</div>
 
     <!-- Nav bar -->
-    <div id='top-navigation'>
-        <a id='home-link' class='active' href='#'><i class="fa-solid fa-house-chimney"></i></a>
-        <a id='catalogue-link' href='https://n-m-luna.github.io/art/catalogue/index.html'>Artist Calatolgue</a>
-        <a id='archive-link' href='https://n-m-luna.github.io/art/archive/index.html'>Archive</a>
-        <a id='about-link' href='https://n-m-luna.github.io/art/about/index.html'>About</a>
-        <a id='contact-link' href='https://n-m-luna.github.io/art/content/index.html'>Contact</a>
-        <a id='blog-link' href='https://n-m-luna.github.io/art/blog/index.html'>Blog</a>
-        <!-- onclick='activate(archive-link)' -->
+    <div id='myTopnav' class='topnav'>
+        <a id='home-link' href='#' class='active' onclick='goHome()'><i class='fa-solid fa-house-chimney'></i></a>
+        <p id='current-tab'> / Home </p>
+        <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
+        <a id='contact-link' href='#' class='nav-anchor' onclick='activate("contact-link")'>Contact</a>
+        <a id='about-link' href='#' class='nav-anchor' onclick='activate("about-link")'>About</a>
+        <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link")'>Blog</a>
+        <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link")'>Archive</a>
+        <a id='menu-icon' href='javascript:void(0);' onclick='toggleMobileMenu()'>
+            <i class='fa-solid fa-bars'></i>
+        </a>
     </div>
 
+    <!------------ Start Home Content ------------>
+    <section id='home-content'>
+        <!-- Intro/About the artist-->
+        <div class='artist-intro'>
+            <p>
+                I'm Luna, <br> <i class="fa-solid fa-moon"></i> <br> dipper of the watercolor brush and wielder of the ink nib. <br> <i class="fa-solid fa-paintbrush"></i> <i class="fa-solid fa-palette"></i> <i class="fa-solid fa-pen-fancy"></i>  <br> Science fiction, math, tattoos, and dancing are other interests which find their way to my art.<br> Currently based in Northern California, but originally from Puerto Rico.
+            </p>
+        </div>
 
-    <!-- Intro/About the artist-->
-    <div class='artist-intro'>
-        <p>
-            I'm Luna, <br>  creator of watercolor-and-ink illustrations. <br> Science fiction, math, tattoos, and dancing are other interests which find their way to my art.<br> I was born in Puerto Rico, but am currently based in Northern California. <br> <a href='https://n-m-luna.github.io/art/about/index.html'>Click here to learn more about me.</a>
-        </p>
-        <!-- <i class="fa-solid fa-moon"></i>  -->
-    </div>
+        <hr>
+        <!-- Preview of my art -->
+        <div id='art-at-a-glance'>
+            <p class='intro'>My favorite mediums to combine are watercolors and ink outlines.</p>
+            <div class='art-card-holder'>
+                <div class='art-card med'>
+                    <img src="scans/2021throatpunch.jpeg" alt="Throat Punch">
+                    <p class='copyrightP'>Throat Punch © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card med'>
+                    <img src="scans/2024theElfWithTheDragonTattoo.jpeg" alt="The Elf with the Dragon Tattoo">
+                    <p class='copyrightP'>The Elf with the Dragon Tattoo © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
 
-    <hr>
-    <!-- Preview of my art -->
-    <div id='art-at-a-glance'>
-        <p class='intro'>My favorite mediums to combine are watercolors and ink outlines.</p>
-        <div class='art-card-holder'>
-            <div class='art-card med'>
-                <img src="scans/2021throatpunch.jpeg" alt="Throat Punch">
-                <p class='copyrightP'>Throat Punch © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card med'>
-                <img src="scans/2024theElfWithTheDragonTattoo.jpeg" alt="The Elf with the Dragon Tattoo">
-                <p class='copyrightP'>The Elf with the Dragon Tattoo © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
+        <hr>
+            <p class='intro'>Sometimes, I use solely watercolors for their soft edges and suggestive shapes.</p>
+            <div class='art-card-holder'>
+                <div class='art-card sm'>
+                    <img src="scans/2023theForestScene.jpeg" alt="The Forest Scene">
+                    <p class='copyrightP'>The Forest Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card sm'>
+                    <img src="scans/2023theRobotTrainStationScene.jpeg" alt="The Robot Train Station Scene">
+                    <p class='copyrightP'>The Robot Train Station Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card sm'>
+                    <img src="scans/2023royalty.jpeg" alt="Royalty">
+                    <p class='copyrightP'>Royalty © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
 
-    <hr>
-        <p class='intro'>Sometimes, I use solely watercolors for their soft edges and suggestive shapes.</p>
-        <div class='art-card-holder'>
-            <div class='art-card sm'>
-                <img src="scans/2023theForestScene.jpeg" alt="The Forest Scene">
-                <p class='copyrightP'>The Forest Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card sm'>
-                <img src="scans/2023theRobotTrainStationScene.jpeg" alt="The Robot Train Station Scene">
-                <p class='copyrightP'>The Robot Train Station Scene © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card sm'>
-                <img src="scans/2023royalty.jpeg" alt="Royalty">
-                <p class='copyrightP'>Royalty © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
+        <hr>
+            <p class='intro'>I love making space babes! They combine two of my favorite things: science fiction and pinups.</p>
+            <div class='art-card-holder'>
+                <div class='art-card med'>
+                    <img src="scans/2021sallySupernova.jpeg" alt="Sally Supernova">
+                    <p class='copyrightP'>Sally Supernova © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card med'>
+                    <img src="scans/2023starTease.jpeg" alt="Star Tease">
+                    <p class='copyrightP'>Star Tease © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
+            <div class='art-card-holder'>
+                <div class='art-card med'>
+                    <img src="scans/2021daphne.jpeg" alt="Daphne">
+                    <p class='copyrightP'>Daphne © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card med'>
+                    <img src="scans/2021velma.jpeg" alt="Velma">
+                    <p class='copyrightP'>Velma © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
 
-    <hr>
-        <p class='intro'>I love making space babes! They combine two of my favorite things: science fiction and pinups.</p>
-        <div class='art-card-holder'>
-            <div class='art-card med'>
-                <img src="scans/2021sallySupernova.jpeg" alt="Sally Supernova">
-                <p class='copyrightP'>Sally Supernova © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card med'>
-                <img src="scans/2023starTease.jpeg" alt="Star Tease">
-                <p class='copyrightP'>Star Tease © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
-        <div class='art-card-holder'>
-            <div class='art-card med'>
-                <img src="scans/2021daphne.jpeg" alt="Daphne">
-                <p class='copyrightP'>Daphne © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card med'>
-                <img src="scans/2021velma.jpeg" alt="Velma">
-                <p class='copyrightP'>Velma © 2021 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
+        <hr>
+            <p class='intro'>Dancing is also a big part of who I am.</p>
+            <div class='art-card-holder'>
+                <div class='art-card med'>
+                    <img src="scans/2023laBailarina.jpeg" alt="La Bailarina">
+                    <p class='copyrightP'>La Bailarina © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card med'>
+                    <img src="scans/2023theRoaringDancer.jpeg" alt="The Roaring Dancer">
+                    <p class='copyrightP'>The Roaring Dancer © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
 
-    <hr>
-        <p class='intro'>Dancing is also a big part of who I am.</p>
-        <div class='art-card-holder'>
-            <div class='art-card med'>
-                <img src="scans/2023laBailarina.jpeg" alt="La Bailarina">
-                <p class='copyrightP'>La Bailarina © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card med'>
-                <img src="scans/2023theRoaringDancer.jpeg" alt="The Roaring Dancer">
-                <p class='copyrightP'>The Roaring Dancer © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
+        <hr>
+            <p class='intro'>Another hobby that pops up in my art is traditional American tattoos.</p>
+            <div class='art-card-holder'>
+                <div class='art-card sm'>
+                    <img src="scans/2023tattooedPinupNo2.jpeg" alt="Tattooed Pinup No. 2">
+                    <p class='copyrightP'>Tattooed Pinup No. 2 © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card sm'>
+                    <img src="scans/2024cortanaFlashNo1.jpeg" alt="Cortana Flash No. 1">
+                    <p class='copyrightP'>Cortana Flash No. 1 © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+                <div class='art-card sm'>
+                    <img src="scans/2023beetleguiseFlash.jpeg" alt="Beetleguise Flash">
+                    <p class='copyrightP'>Beetleguise Flash © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                </div>
+            </div> <!--art-card-holder-->
+        </div>
+    </section> <!--End Home Content-->
 
-    <hr>
-        <p class='intro'>Another hobby that pops up in my art is traditional American tattoos.</p>
-        <div class='art-card-holder'>
-            <div class='art-card sm'>
-                <img src="scans/2023tattooedPinupNo2.jpeg" alt="Tattooed Pinup No. 2">
-                <p class='copyrightP'>Tattooed Pinup No. 2 © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card sm'>
-                <img src="scans/2024cortanaFlashNo1.jpeg" alt="Cortana Flash No. 1">
-                <p class='copyrightP'>Cortana Flash No. 1 © 2024 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='art-card sm'>
-                <img src="scans/2023beetleguiseFlash.jpeg" alt="Beetleguise Flash">
-                <p class='copyrightP'>Beetleguise Flash © 2023 by N. M. Luna is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div> <!--art-card-holder-->
-    </div>
+    <!------------ Start Catalogue Content ------------>
+    <section id='catalogue-content' class='hidden'>
+        <p>This is my statement.</p>
+        <p>And this is my art.</p>
+    </section><!--End Catalogue Content-->
+
+    <!------------ Start Archive Content ------------>
+    <section id='archive-content' class='hidden'>
+        <p>This is the archive of all my art.</p>
+
+        <hr>
+        2025 - Brief description here
+        ...
+    </section><!--End Archive Content-->
+
+    <!------------ Start About Content ------------>
+    <section id='about-content' class='hidden'>
+        <p>This is a short bio.</p>
+    </section><!--End About Content-->
+
+    <!------------ Start Blog Content ------------>
+    <section id='blog-content' class='hidden'>
+        <p>This is my blog.</p>
+    </section><!--End Blog Content-->
+
+    <!------------ Start Contact Content ------------>
+    <section id='contact-content' class='hidden'>
+        <p>This is how you can reach me.</p>
+    </section><!--End Contact Content-->
 
     <button id='back-to-top-btn' onclick='takeMeToTheTop()'><i class="fa-solid fa-up-long"></i></button>
 
@@ -139,7 +171,9 @@
         <p>Thanks for looking!</p>
 
         <p>Wanna get in touch?</p>
-        <div class='contact-icon'><a href='mailto:art.by.n.m.luna@gmail.com' traget='_blank'><i class="fa-solid fa-envelope"></i></a></div> <div class='contact-icon'><a href='https://www.instagram.com/some.crafty.cat/' traget='_blank'><i class="fa-brands fa-instagram"></i></a></div>
+        <div class='contact-icon'>
+            <a href='mailto:art.by.n.m.luna@gmail.com' traget='_blank'><i class="fa-solid fa-envelope"></i></a></div> <div class='contact-icon'><a href='https://www.instagram.com/some.crafty.cat/' traget='_blank'><i class="fa-brands fa-instagram"></i></a>
+        </div>
 
         <p>All works here are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>Creative Commons</a>.</p>
         <div><img class='l-icons' src='img/cc.svg' alt='CC'> <img class='l-icons' src='img/by.svg' alt='BY'> <img class='l-icons' src='img/nc.svg' alt='NC'> <img class='l-icons' src='img/sa.svg' alt='SA'>
