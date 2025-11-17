@@ -15,7 +15,7 @@ Color scheme:
 body {
   align-items: center;
   color: #0d4771;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: serif;
   margin: 0px auto;
   max-width: 1100px;
   text-align: center;
@@ -48,7 +48,7 @@ a {
 .page-intro p {
   font-size: 20px;
   line-height: 1.5;
-  margin: 200px auto 100px auto;
+  margin: 200px auto 200px auto;
   max-width: 520px;
   width: 80%;
 }
@@ -56,6 +56,49 @@ a {
   font-size: 24px;
   margin: 80px auto;
   width: 80%;
+}
+.eDirection {
+  font-family: monospace;
+}
+/* General Images */
+.art-card-holder {
+  margin: auto;
+}
+.art-card {
+  display: inline-block;
+  padding: 5px;
+  width: 75%; /* TODO Make the width change continuous */
+}
+.landscape {
+  width: 75%
+}
+.med {
+  width: 40%;
+}
+.sm {
+  width: 30%;
+}
+.xs {
+  width: 24%;
+}
+.art-card img {
+  width: 100%;
+}
+.copyrightP {
+  color: darkgray;
+  font-size: 11px;
+}
+@media screen and (max-width: 650px) {
+  .art-card-holder {
+    display: block;
+  }
+  .art-card {
+    display: block;
+    margin: auto;
+  }
+  .xs, .sm, .med {
+    width: 75%;
+  }
 }
 
 /* Top bar */
@@ -136,38 +179,52 @@ a {
 #art-at-a-glance {
   width: 100%;
 }
-.art-card-holder {
-  margin: auto;
+
+/* Section 2: Catalogue */
+.catalog-list {
+  width: 100%
 }
-.art-card {
-  display: inline-block;
-  padding: 5px;
+.catalog-card {
+  display: flex;
+  align-items: center;
+  margin: 50px auto;
+  width: 80%;
 }
-.med {
-  width: 40%;
+.catalog-card::after {
+  content: '';
+  clear: both;
+  display: table;
 }
-.sm {
-  width: 30%;
+.catalog-card img {
+  margin: 25px;
+  max-width: 500px;
+  width: 75%;
 }
-.art-card img {
-  width: 100%;
+.catalog-card:nth-child(odd) img {
+  float: left;
 }
-.copyrightP {
-  color: darkgray;
-  font-size: 12px;
+.catalog-card:nth-child(even) img {
+  float: right;
 }
-@media screen and (max-width: 650px) {
-  .art-card-holder {
+.card-title {
+  font-size: 20px;
+}
+@media screen and (max-width: 900px) {
+  .catalog-card {
     display: block;
   }
-  .art-card {
+  .catalog-card:nth-child(odd) img{
     display: block;
+    float: none;
     margin: auto;
   }
-  .sm, .med {
-    width: 75%;
+  .catalog-card:nth-child(even) img{
+    display: block;
+    float: none;
+    margin: 25px auto;
   }
 }
+
 /* Section 3: Archive */
 .gallery {
   align-items: baseline;
@@ -186,16 +243,67 @@ a {
   width: 100%;
 }
 
+/* Section 4: Shop */
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: #7b6992;
+  color: white;
+}
+td {
+  padding: 7px 5px;
+}
+#shop-content p {
+  margin-left: 20%;
+  margin-top: 50px;
+  text-align: left;
+}
+#shop-content {
+  padding-top: 50px;
+}
+
+/* Section ?: Blog */
+#blog-content {
+  margin: auto;
+  text-align: left;
+  width: 75%;
+}
+#blog-content p {
+  color: #445881;
+}
+.blog-title {
+  /* color: #0d4771; */
+  font-size: 26px;
+  text-decoration: none;
+}
+.blog-title:hover {
+  text-decoration: underline;
+}
+
+/* Section ?: About */
+#about-content {
+  margin: auto;
+  width: 75%;
+}
+.bio {
+  line-height: 1.75;
+  margin: auto;
+  max-width: 500px;
+  padding: 30px 0px;
+}
+
 /* Footer */
 footer {
   background-color: #445881;
   color: white;
   margin-bottom: 0px;
-  margin-top: 75px;
-  padding-bottom: 50px;
-  padding-left: 30px;
-  padding-top: 40px;
-  text-align: left;
+  margin-top: 180px;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 footer a {
   color: #b17aa2;
@@ -207,7 +315,12 @@ footer a:hover {
 #where-to-go-now {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-bottom: 50px;
+  margin-top: 50px;
+}
+.my-name {
+  font-family: cursive;
 }
 .go-here {
   width: 150px;
@@ -229,10 +342,5 @@ footer a:hover {
 /*
 TODO later
 - Re-write everything
-- Make contact page
-- Make archive
-- Write about
-- Make catalogue
 - Write blog for seo
-- Make my name in footer render in cursive font
 */

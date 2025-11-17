@@ -21,7 +21,7 @@ function toggleMobileMenu() {
 }
 
 //Change sections
-function goHome() {
+function goHome(fromFooter = false) {
 
   //Activate home
   const homeLink = document.getElementById('home-link')
@@ -49,11 +49,11 @@ function goHome() {
 
   //Close mobile menu if it's open
   const menuControl = document.getElementById('menu-icon').firstElementChild
-  if (menuControl.classList[1] === 'fa-x') {
+  if (menuControl.classList[1] === 'fa-x' && !fromFooter) {
     toggleMobileMenu()
   }
 }
-function activate(sectionID) {
+function activate(sectionID, fromFooter = false) {
 
   //De-activate everything
   const homeLink = document.getElementById('home-link')
@@ -83,7 +83,9 @@ function activate(sectionID) {
   currentTb.innerHTML = ` / ${tabName} `
 
   //Close mobine menu
+  if(!fromFooter) {
   toggleMobileMenu()
+  }
 }
 
 // Back to top button
