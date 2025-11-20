@@ -185,8 +185,11 @@ a {
   width: 100%
 }
 .catalog-card {
-  display: flex;
+  display: block;
+  /* To make the nth-child rules apply, this needs to be displayed as a block, not:
   align-items: center;
+  display: flex
+  */
   margin: 50px auto;
   width: 80%;
 }
@@ -199,6 +202,12 @@ a {
   margin: 25px;
   max-width: 500px;
   width: 75%;
+}
+.gallery-tag {
+  padding-top: 250px;
+}
+.gallery-tag-landscape {
+  padding-top: 150px;
 }
 .catalog-card:nth-child(odd) img {
   float: left;
@@ -213,12 +222,15 @@ a {
   .catalog-card {
     display: block;
   }
-  .catalog-card:nth-child(odd) img{
+  .catalog-tag, .gallery-tag-landscape {
+    padding-top: 10px;
+  }
+  .catalog-card:nth-child(even) img {
     display: block;
     float: none;
-    margin: auto;
+    margin: 25px auto;
   }
-  .catalog-card:nth-child(even) img{
+  .catalog-card:nth-child(odd) img {
     display: block;
     float: none;
     margin: 25px auto;
@@ -340,7 +352,7 @@ footer a:hover {
 }
 
 /*
-TODO later
-- Re-write everything
-- Write blog for seo
+TODO
+- Write blog posts
+- Re-style back-to-top-button and edit copy.
 */
