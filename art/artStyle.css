@@ -222,7 +222,7 @@ a {
   .catalog-card {
     display: block;
   }
-  .catalog-tag, .gallery-tag-landscape {
+  .gallery-tag, .gallery-tag-landscape {
     padding-top: 10px;
   }
   .catalog-card:nth-child(even) img {
