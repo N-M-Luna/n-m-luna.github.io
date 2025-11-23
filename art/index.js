@@ -88,6 +88,42 @@ function activate(sectionID, fromFooter = false) {
   }
 }
 
+//Filter works in archive
+function applyFilter(paintType) {
+
+  //Change style of btn
+  const fBtns = document.getElementsByClassName('filter-btn')
+  for (let i = 0; i < fBtns.length; i++) {
+      if (fBtns[i].classList.contains('filtered')) {
+        fBtns[i].classList.remove('filtered')
+      }
+  }
+  const activeBtn = document.getElementById(paintType + '-btn')
+  activeBtn.classList.add('filtered')
+
+  //Show/hide each painting in the gallery
+  const artPieces = document.getElementsByClassName('archived-art')
+  for (let i = 0; i < artPieces.length; i++) {
+    if (artPieces[i].classList.contains(paintType) || paintType === 'all') {
+      artPieces[i].style.display = ''
+    } else {
+      artPieces[i].style.display = 'none'
+    }
+  }
+
+  //Show/hide year summaries
+  const yearSummaries = document.getElementsByClassName('year-summary')
+  if (paintType === 'all') {
+    for(let i = 0; i < yearSummaries.length; i++) {
+      yearSummaries[i].style.display = ''
+    }
+  } else {
+    for(let i = 0; i < yearSummaries.length; i++) {
+      yearSummaries[i].style.display = 'none'
+    }
+  }
+}
+
 // Back to top button
 function takeMeToTheTop() {
   document.body.scrollTop = 0;

@@ -1,6 +1,6 @@
 /*
 Color scheme:
- Dark blue #0d4771
+*Dark blue #0d4771
 *Pale Blue #445881
 *Purple #7b6992
 *Pink #b17aa2
@@ -32,16 +32,18 @@ a {
 #back-to-top-btn {
   background-color: transparent;
   border-width: 0px;
+  border-radius: 10%;
   bottom: 5%;
   color: #7b6992;
   font-size: 18px;
+  padding: 5px 0px;
   position: fixed;
-  right: 2.5%;
+  right: 2%;
 }
 #back-to-top-btn:hover {
-  color:#445881;
+  background-color: #445881;
+  color: white;
 }
-/* General text */
 .page-intro {
   padding-top: 20px;
 }
@@ -59,46 +61,6 @@ a {
 }
 .eDirection {
   font-family: monospace;
-}
-/* General Images */
-.art-card-holder {
-  margin: auto;
-}
-.art-card {
-  display: inline-block;
-  padding: 5px;
-  width: 75%; /* TODO Make the width change continuous */
-}
-.landscape {
-  width: 75%
-}
-.med {
-  width: 40%;
-}
-.sm {
-  width: 30%;
-}
-.xs {
-  width: 24%;
-}
-.art-card img {
-  width: 100%;
-}
-.copyrightP {
-  color: darkgray;
-  font-size: 11px;
-}
-@media screen and (max-width: 650px) {
-  .art-card-holder {
-    display: block;
-  }
-  .art-card {
-    display: block;
-    margin: auto;
-  }
-  .xs, .sm, .med {
-    width: 75%;
-  }
 }
 
 /* Top bar */
@@ -179,17 +141,55 @@ a {
 #art-at-a-glance {
   width: 100%;
 }
+.art-card-holder {
+  margin: auto;
+}
+.art-card {
+  display: inline-block;
+  padding: 5px;
+  width: 75%; /* TODO Make the width change continuous */
+}
+.landscape {
+  width: 75%
+}
+.med {
+  width: 40%;
+}
+.sm {
+  width: 30%;
+}
+.xs {
+  width: 24%;
+}
+.art-card img {
+  width: 100%;
+}
+.copyrightP {
+  color: darkgray;
+  font-size: 11px;
+}
+@media screen and (max-width: 650px) {
+  .art-card-holder {
+    display: block;
+  }
+  .art-card {
+    display: block;
+    margin: auto;
+  }
+  .xs, .sm, .med {
+    width: 75%;
+  }
+  .landscape {
+    width: 80%;
+  }
+}
 
 /* Section 2: Catalogue */
-.catalog-list {
+#catalog-list {
   width: 100%
 }
 .catalog-card {
   display: block;
-  /* To make the nth-child rules apply, this needs to be displayed as a block, not:
-  align-items: center;
-  display: flex
-  */
   margin: 50px auto;
   width: 80%;
 }
@@ -205,6 +205,8 @@ a {
 }
 .gallery-tag {
   padding-top: 250px;
+  margin: auto;
+  width: 75%;
 }
 .gallery-tag-landscape {
   padding-top: 150px;
@@ -254,12 +256,47 @@ a {
 .archived-art img {
   width: 100%;
 }
+.year-summary {
+  border-top: 2px solid #445881;
+  margin: 10px auto 0px auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: right;
+  width: 80%;
+}
+#filter-bar {
+  color: #445881;
+  margin: 0px auto 50px auto;
+  width: 80%;
+}
+.filter-btn {
+  /* background-color: darkgrey; */
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 7px 5px;
+  padding: 10px 7px;
+}
+.filter-btn:hover {
+  background-color: #445881;
+  color: white;
+}
+.filter-btn.filtered {
+  background-color: #7b6992;
+  color: white;
+}
 
 /* Section 4: Shop */
+#shop-content {
+  padding-top: 100px;
+}
+#shop-content p {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left;
+}
 table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
+  margin: 40px auto;
   text-align: left;
 }
 tr:nth-child(even) {
@@ -269,16 +306,8 @@ tr:nth-child(even) {
 td {
   padding: 7px 5px;
 }
-#shop-content p {
-  margin-left: 20%;
-  margin-top: 50px;
-  text-align: left;
-}
-#shop-content {
-  padding-top: 50px;
-}
 
-/* Section ?: Blog */
+/* Section 5: Blog */
 #blog-content {
   margin: auto;
   text-align: left;
@@ -288,7 +317,6 @@ td {
   color: #445881;
 }
 .blog-title {
-  /* color: #0d4771; */
   font-size: 26px;
   text-decoration: none;
 }
@@ -296,7 +324,8 @@ td {
   text-decoration: underline;
 }
 
-/* Section ?: About */
+/* Section 6: About
+Images use the same classes as for Section 1: Home */
 #about-content {
   margin: auto;
   width: 75%;
@@ -314,8 +343,7 @@ footer {
   color: white;
   margin-bottom: 0px;
   margin-top: 180px;
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding: 80px 10%;
 }
 footer a {
   color: #b17aa2;
@@ -350,9 +378,3 @@ footer a:hover {
   width: 30px;
   max-width: 75%;
 }
-
-/*
-TODO
-- Write blog posts
-- Re-style back-to-top-button and edit copy.
-*/
