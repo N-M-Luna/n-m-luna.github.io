@@ -45,7 +45,7 @@ function goHome(fromFooter = false) {
 
   //Update tab name
   const currentTb = document.getElementById('current-tab')
-  currentTb.innerHTML = ' / Home '
+  currentTb.innerHTML = ''
 
   //Close mobile menu if it's open
   const menuControl = document.getElementById('menu-icon').firstElementChild
@@ -112,16 +112,16 @@ function applyFilter(paintType) {
   }
 
   //Show/hide year summaries
-  const yearSummaries = document.getElementsByClassName('year-summary')
-  if (paintType === 'all') {
-    for(let i = 0; i < yearSummaries.length; i++) {
-      yearSummaries[i].style.display = ''
-    }
-  } else {
-    for(let i = 0; i < yearSummaries.length; i++) {
-      yearSummaries[i].style.display = 'none'
-    }
-  }
+  // const yearSummaries = document.getElementsByClassName('year-summary')
+  // if (paintType === 'all') {
+  //   for(let i = 0; i < yearSummaries.length; i++) {
+  //     yearSummaries[i].style.display = ''
+  //   }
+  // } else {
+  //   for(let i = 0; i < yearSummaries.length; i++) {
+  //     yearSummaries[i].style.display = 'none'
+  //   }
+  // }
 }
 
 // Back to top button

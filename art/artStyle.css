@@ -147,19 +147,20 @@ a {
 .art-card {
   display: inline-block;
   padding: 5px;
-  width: 75%; /* TODO Make the width change continuous */
+  width: 80%;
+  min-width: none;
 }
 .landscape {
+  min-width: 300px;
   width: 75%
 }
 .med {
+  min-width: 275px;
   width: 40%;
 }
 .sm {
+  min-width: 275px;
   width: 30%;
-}
-.xs {
-  width: 24%;
 }
 .art-card img {
   width: 100%;
@@ -175,12 +176,6 @@ a {
   .art-card {
     display: block;
     margin: auto;
-  }
-  .xs, .sm, .med {
-    width: 75%;
-  }
-  .landscape {
-    width: 80%;
   }
 }
 
@@ -201,7 +196,7 @@ a {
 .catalog-card img {
   margin: 25px;
   max-width: 500px;
-  width: 75%;
+  width: 80%;
 }
 .gallery-tag {
   padding-top: 250px;
@@ -249,8 +244,8 @@ a {
   padding-right: 5%;
 }
 .archived-art {
-  min-width: 250px;
-  width: 25%;
+  min-width: 300px;
+  width: 40%;
   padding: 5px;
 }
 .archived-art img {
