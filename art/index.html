@@ -32,7 +32,7 @@
         <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
         <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link")'>Archive</a>
         <a id='shop-link' href='#' class='nav-anchor' onclick='activate("shop-link")'>Shop</a>
-        <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link")'>Blog</a>
+        <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link"); goBackToBlog();'>Blog</a>
         <a id='about-link' href='#' class='nav-anchor' onclick='activate("about-link")'>About</a>
         <a id='contact-link' href='#' class='nav-anchor' onclick='activate("contact-link")'>Contact</a>
         <a id='menu-icon' href='javascript:void(0);' onclick='toggleMobileMenu()'>
@@ -495,20 +495,94 @@
 
     <!------------ Start Blog Content ------------>
     <section id='blog-content' class='hidden'>
-        <div class='page-intro'>
-        <p>This is a blog where I discuss my painting process, my tools, and my favorite artists.</p>
+
+            <div id='blog-intro' class='page-intro'>
+            <p>This is a space where I share what my painting process looks like, talk about tools or paints I've tried and would recomment, and rant about my favorite artists or art styles.</p>
+            </div><!-- shown on goBackToBlog() -->
+
+            <p id='back-to-index-btn' class='hidden'><a href='#' onclick='goBackToBlog()'>Back to blog index</a></p><!-- shown on openBlogPost() -->
+
+            <div class='blog-title'>
+            <a href='#' onclick='openBlogPost(0)'>My 1000-step process for painting watercolors</a>
+            <p>1 dec 2025.</p>
+            <p> An outline of my watercolor paintng process. It starts with sketches, followed by a final ink outline drawing. Then I do a color study, where I pick color hues and families. From this, I make the pencil outline on the actual watercolor paper. Then (and only then!) the actual painting begins; lightest part to darkest part of the image. </p>
+            </div>
+
+            <div class='blog-post hidden'>
+                <p>article about the process of painting a watercolor. It's 3am, time to create some chaos shed everywhere shed
+                    everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff for lick the
+                    other cats yet somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of
+                    shock. Human is in bath tub, emergency! drowning!
+                </p>
+                <p>meooowww! meow to be let out, or cats making all the muffins leave buried treasure in the sandbox for the toddlers
+                    white cat sleeps on a black shirt. Slap kitten brother with paw purr as loud as possible, be the most annoying cat
+                    that you can, and, knock everything off the table.
+                </p>
+                <p>Peer out window, chatter at birds, lure them to mouth kitten is playing with dead mouse mew mew yet eats owners hair
+                    then claws head annoy kitten brother with poking. Run up and down stairs this is the day and cough i show my fluffy
+                    belly but it's a trap! if you pet it i will tear up your hand and nya nya nyan cat not kitten around iâ€™m so hungry
+                    iâ€™m so hungry but ew not for that .
+                </p>
+                <p>Poop on couch. Hack i is not fat, i is fluffy so run as fast as i can into another room for no reason chew foot, for
+                    intrigued by the shower. Claw drapes funny little cat chirrup noise shaking upright tail when standing next to you
+                    walk on car leaving trail of paw prints on hood and windshield and human is in bath tub, emergency! drowning!
+                    meooowww!</p>
+            </div>
+
+            <div class='blog-title'>
+                <a href='#' onclick='openBlogPost(1)'>A view/discussion of some of this or that artist.</a>
+            <p>1 jan 2026.</p>
+            <p> Abstract of post ... Find a way to fit in tiny box cat walks in keyboard nyan fluffness ahh cucumber! or avoid the new toy and just play with the box it came in but brown cats with pink ears rub against owner because nose is wet. Pushes butt to face. Love blinks and purr purr purr purr</p>
+            </div>
+
+            <div class='blog-post hidden'>
+                <p>article about this artist  It's 3am, time to create some chaos shed everywhere shed
+                    everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff for lick the
+                    other cats yet somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of
+                    shock. Human is in bath tub, emergency! drowning!
+                </p>
+                <p>meooowww! meow to be let out, or cats making all the muffins leave buried treasure in the sandbox for the toddlers
+                    white cat sleeps on a black shirt. Slap kitten brother with paw purr as loud as possible, be the most annoying cat
+                    that you can, and, knock everything off the table.
+                </p>
+                <p>Peer out window, chatter at birds, lure them to mouth kitten is playing with dead mouse mew mew yet eats owners hair
+                    then claws head annoy kitten brother with poking. Run up and down stairs this is the day and cough i show my fluffy
+                    belly but it's a trap! if you pet it i will tear up your hand and nya nya nyan cat not kitten around iâ€™m so hungry
+                    iâ€™m so hungry but ew not for that .
+                </p>
+                <p>Poop on couch. Hack i is not fat, i is fluffy so run as fast as i can into another room for no reason chew foot, for
+                    intrigued by the shower. Claw drapes funny little cat chirrup noise shaking upright tail when standing next to you
+                    walk on car leaving trail of paw prints on hood and windshield and human is in bath tub, emergency! drowning!
+                    meooowww!</p>
+            </div>
+
+            <div class='blog-title'><a href='#' onclick='openBlogPost(2)'>Review of: This paint set or that paper.</a>
+            <p>1 feb 2026</p>
+            <p> Abstract of post ... Need to check on human, have not seen in an hour might be dead oh look, human is alive, hiss at human, feed me kitty time. Cats woo. Climb leg pooping rainbow while flying in a toasted bread costume in space so i dreamt about fish yum! i like fish slap the dog because cats rule </p>
+            </div>
+
+            <div class='blog-post hidden'>
+                <p>article about this paint set  It's 3am, time to create some chaos shed everywhere shed
+                    everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff for lick the
+                    other cats yet somehow manage to catch a bird but have no idea what to do next, so play with it until it dies of
+                    shock. Human is in bath tub, emergency! drowning!
+                </p>
+                <p>meooowww! meow to be let out, or cats making all the muffins leave buried treasure in the sandbox for the toddlers
+                    white cat sleeps on a black shirt. Slap kitten brother with paw purr as loud as possible, be the most annoying cat
+                    that you can, and, knock everything off the table.
+                </p>
+                <p>Peer out window, chatter at birds, lure them to mouth kitten is playing with dead mouse mew mew yet eats owners hair
+                    then claws head annoy kitten brother with poking. Run up and down stairs this is the day and cough i show my fluffy
+                    belly but it's a trap! if you pet it i will tear up your hand and nya nya nyan cat not kitten around iâ€™m so hungry
+                    iâ€™m so hungry but ew not for that .
+                </p>
+                <p>Poop on couch. Hack i is not fat, i is fluffy so run as fast as i can into another room for no reason chew foot, for
+                    intrigued by the shower. Claw drapes funny little cat chirrup noise shaking upright tail when standing next to you
+                    walk on car leaving trail of paw prints on hood and windshield and human is in bath tub, emergency! drowning!
+                    meooowww!</p>
+            </div>
         </div>
 
-        <!-- TODO -->
-        <a href='' class='blog-title'>My 1000-step process for painting watercolors</a>
-        <p>1 dec 2025.</p>
-        <!-- An outline of my watercolor paintng process. It starts with sketches, followed by a final ink outline drawing. Then I do a color study, where I pick color hues and families. From this, I make the pencil outline on the actual watercolor paper. Then (and only then!) the actual painting begins -->
-
-        <a href='' class='blog-title'>A view/discussion of some of this or that artist.</a>
-        <p>1 jan 2026</p>
-
-        <a href='' class='blog-title'>Review of: This paint set or that paper.</a>
-        <p>1 feb 2026</p>
     </section><!--End Blog Content-->
 
     <!------------ Start Contact Content ------------>

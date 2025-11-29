@@ -311,12 +311,21 @@ td {
 #blog-content p {
   color: #445881;
 }
-.blog-title {
+.blog-title a {
   font-size: 26px;
   text-decoration: none;
 }
-.blog-title:hover {
+.blog-title a:hover {
   text-decoration: underline;
+}
+#back-to-index-btn {
+  margin-bottom: 50px;
+}
+.blog-post {
+  margin-top: 60px;
+}
+.blog-post p {
+  font-size: 20px;
 }
 
 /* Section 6: About

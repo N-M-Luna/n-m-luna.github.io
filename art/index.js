@@ -124,6 +124,42 @@ function applyFilter(paintType) {
   // }
 }
 
+//Open a blog post
+function openBlogPost(postID) {
+  //Hide blog index
+  const titleDivs = document.getElementsByClassName('blog-title')
+  for(let i = 0; i < titleDivs.length; i++) {
+    titleDivs[i].classList.add('hidden')
+  }
+  //Show the blog title and full post with postID
+  const postDIVs = document.getElementsByClassName('blog-post')
+  titleDivs[postID].classList.remove('hidden')
+  postDIVs[postID].classList.remove('hidden')
+  //Hide blog intro
+  const introToBlog = document.getElementById('blog-intro')
+  introToBlog.classList.add('hidden')
+  //Show Back to Index btn
+  const backToIndexBtn = document.getElementById('back-to-index-btn')
+  backToIndexBtn.classList.remove('hidden')
+}
+
+//Open all blog posts
+function goBackToBlog() {
+  //Show blog index and hide full blog posts
+  const postDIVs = document.getElementsByClassName('blog-post')
+  const titleDivs = document.getElementsByClassName('blog-title')
+  for(let i = 0; i < postDIVs.length; i++) {
+    postDIVs[i].classList.add('hidden')
+    titleDivs[i].classList.remove('hidden')
+  }
+  //Show blog intro
+  const introToBlog = document.getElementById('blog-intro')
+  introToBlog.classList.remove('hidden')
+  //hide Back to Index btn
+  const backToIndexBtn = document.getElementById('back-to-index-btn')
+  backToIndexBtn.classList.add('hidden')
+}
+
 // Back to top button
 function takeMeToTheTop() {
   document.body.scrollTop = 0;
