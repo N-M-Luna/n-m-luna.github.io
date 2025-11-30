@@ -29,6 +29,9 @@ hr {
 a {
   color: #7b6992;
 }
+a:hover {
+  color: #0d4771;
+}
 #back-to-top-btn {
   background-color: transparent;
   border-width: 0px;
@@ -313,10 +316,6 @@ td {
 }
 .blog-title a {
   font-size: 26px;
-  text-decoration: none;
-}
-.blog-title a:hover {
-  text-decoration: underline;
 }
 #back-to-index-btn {
   margin-bottom: 50px;
