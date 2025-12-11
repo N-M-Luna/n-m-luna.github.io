@@ -65,6 +65,9 @@ a:hover {
 .eDirection {
   font-family: monospace;
 }
+.struckout-text {
+  text-decoration: line-through;
+}
 
 /* Top bar */
 #main-bar {
@@ -307,6 +310,7 @@ td {
 
 /* Section 5: Blog */
 #blog-content {
+  line-height: 1.5;
   margin: auto;
   text-align: left;
   width: 75%;
