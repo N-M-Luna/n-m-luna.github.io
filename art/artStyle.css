@@ -65,6 +65,14 @@ a:hover {
 .eDirection {
   font-family: monospace;
 }
+.section-name {
+  border-top: 2px solid #445881;
+  margin: 10px auto 0px auto;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-align: right;
+  width: 80%;
+}
 .struckout-text {
   text-decoration: line-through;
 }
@@ -256,14 +264,6 @@ a:hover {
 }
 .archived-art img {
   width: 100%;
-}
-.year-summary {
-  border-top: 2px solid #445881;
-  margin: 10px auto 0px auto;
-  padding-bottom: 15px;
-  padding-top: 15px;
-  text-align: right;
-  width: 80%;
 }
 #filter-bar {
   color: #445881;
