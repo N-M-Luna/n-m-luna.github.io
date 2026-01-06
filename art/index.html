@@ -30,7 +30,7 @@
         <a id='home-link' href='#' class='active' onclick='goHome()'><i class='fa-solid fa-house-chimney'></i></a>
         <p id='current-tab'> </p>
         <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
-        <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link")'>Archive</a>
+        <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link"); openArchive();'>Archive</a>
         <a id='shop-link' href='#' class='nav-anchor' onclick='activate("shop-link")'>Shop</a>
         <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link"); goBackToBlog();'>Blog</a>
         <a id='about-link' href='#' class='nav-anchor' onclick='activate("about-link")'>About</a>
@@ -95,7 +95,7 @@
             </div> <!--art-card-holder-->
             <div class='art-card-holder'>
                 <div class='art-card med'>
-                    <img src="scans/2022spaceBabe(Green).jpg" alt="Space Babe (Green)">
+                    <img src="scans/2022spaceBabe(Green).jpeg" alt="Space Babe (Green)">
                     <p class='copyrightP'>Space Babe (Green) © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
                 </div>
                 <div class='art-card med'>
@@ -129,8 +129,8 @@
                     <p class='copyrightP'>Cortana Flash No. 1 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
                 </div>
                 <div class='art-card sm'>
-                    <img src="scans/2023beetleguiseFlash.jpeg" alt="Beetleguise Flash">
-                    <p class='copyrightP'>Beetleguise Flash © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
+                    <img src="scans/2023beetleguiseFlash.jpeg" alt="Horror Flash">
+                    <p class='copyrightP'>Horror Flash © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
                 </div>
             </div> <!--art-card-holder-->
         </div>
@@ -176,19 +176,19 @@
                 <p class='gallery-tag'><span class='card-title'>The Elf with the Dragon Tattoo</span> <br><br> 2024. <br> Watercolor and ink on mixed media paper with vellum surface. 6 x 8 inches. </p>
             </div>
             <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Blue).jpg' alt='Space Babe (Blue)'>
+                    <img src='scans/2022spaceBabe(Blue).jpeg' alt='Space Babe (Blue)'>
                     <p class='gallery-tag'><span class='card-title'>Space Babe (Blue)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
             </div>
             <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Green).jpg' alt='Space Babe (Green)'>
+                    <img src='scans/2022spaceBabe(Green).jpeg' alt='Space Babe (Green)'>
                     <p class='gallery-tag'><span class='card-title'>Space Babe (Green)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
             </div>
             <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Purple).jpg' alt='Space Babe (Purple)'>
+                    <img src='scans/2022spaceBabe(Purple).jpeg' alt='Space Babe (Purple)'>
                     <p class='gallery-tag'><span class='card-title'>Space Babe (Purple)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
             </div>
             <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(White).jpg' alt='Space Babe (White)'>
+                    <img src='scans/2022spaceBabe(White).jpeg' alt='Space Babe (White)'>
                     <p class='gallery-tag'><span class='card-title'>Space Babe (White)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
             </div>
             <div class='catalog-card'>
@@ -223,230 +223,42 @@
         </div>
 
         <hr>
-        <p id='filter-bar'>Filter by:
-            <button id='all-btn' class='filter-btn' onclick="applyFilter('all')">All Works</button>
-            <button id='watercolorAndInk-btn' class='filter-btn' onclick="applyFilter('watercolorAndInk')">Watercolor and Ink</button>
-            <button id='watercolor-btn' class='filter-btn' onclick="applyFilter('watercolor')">Watercolors</button>
-            <button id='ink-btn' class='filter-btn' onclick="applyFilter('ink')">Ink</button>
-            <button id='coloredPencil-btn' class='filter-btn' onclick="applyFilter('coloredPencil')">Colored Pencil</button>
+        <p id='filter-bar'>
+            Filter by media:
+            <button id='all-btn' class='filter-btn' onclick="openArchive()">All Works</button>
+            <button id='watercolorAndInk-btn' class='filter-btn' onclick="openArchive(['watercolor', 'ink'], 'mediaFilter')">Watercolor and Ink</button>
+            <button id='watercolor-btn' class='filter-btn' onclick="openArchive(['watercolor'], 'mediaFilter')">Watercolors</button>
+            <button id='ink-btn' class='filter-btn' onclick="openArchive(['ink'], 'mediaFilter')">Ink</button>
+            <button id='coloredPencil-btn' class='filter-btn' onclick="openArchive(['colored pencil'], 'mediaFilter')">Colored Pencil</button>
+            <button id='coloredPencil-btn' class='filter-btn' onclick="openArchive(['colored pencil', 'ink'], 'mediaFilter')">Colored Pencil and Ink</button> <br>
+            Filter by tag:
+            <button class='filter-btn' onclick="openArchive('cat', 'tagFilter')">cat</button>
+            <button class='filter-btn' onclick="openArchive('comic', 'tagFilter')">comic</button>
+            <button class='filter-btn' onclick="openArchive('dancer', 'tagFilter')">dancer</button>
+            <button class='filter-btn' onclick="openArchive('fantasy', 'tagFilter')">fantasy</button>
+            <button class='filter-btn' onclick="openArchive('flash', 'tagFilter')">flash</button>
+            <button class='filter-btn' onclick="openArchive('floral', 'tagFilter')">floral</button>
+            <button class='filter-btn' onclick="openArchive('hand lettering', 'tagFilter')">hand lettering</button>
+            <button class='filter-btn' onclick="openArchive('learning exercise', 'tagFilter')">learning exercise</button>
+            <button class='filter-btn' onclick="openArchive('local scene', 'tagFilter')">local scene</button>
+            <button class='filter-btn' onclick="openArchive('music', 'tagFilter')">music</button>
+            <button class='filter-btn' onclick="openArchive('music lyrics', 'tagFilter')">music lyrics</button>
+            <button class='filter-btn' onclick="openArchive('pin up', 'tagFilter')">pin up</button>
+            <button class='filter-btn' onclick="openArchive('pop culture', 'tagFilter')">pop culture</button>
+            <button class='filter-btn' onclick="openArchive('robot babe', 'tagFilter')">robot babe</button>
+            <button class='filter-btn' onclick="openArchive('science fiction', 'tagFilter')">science fiction</button>
+            <button class='filter-btn' onclick="openArchive('slice of life', 'tagFilter')">slice of life</button>
+            <button class='filter-btn' onclick="openArchive('space babe', 'tagFilter')">space babe</button>
+            <button class='filter-btn' onclick="openArchive('still life', 'tagFilter')">still life</button>
+            <button class='filter-btn' onclick="openArchive('surreal', 'tagFilter')">surreal</button>
+            <button class='filter-btn' onclick="openArchive('traditional American tattoo', 'tagFilter')">traditional American tattoo</button>
         </p>
 
-
-        <div class='section-name'>Year 2025</div>
-        <div class='gallery'>
-            <div class='archived-art ink'>
-                    <img src='scans/2025fishLegs.jpeg' alt='Fish Legs'>
-                    <p class='copyrightP'>Fish Legs © 2025 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img src='scans/2025ingredientes.jpeg' alt='Ingredientes'>
-                    <p class='copyrightP'>Ingredientes © 2025 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img src='scans/2025killboyPowerheadNo1.jpeg' alt='Killboy Powerhead No. 1'>
-                    <p class='copyrightP'>Killboy Powerhead No. 1 © 2025 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img src='scans/2025killboyPowerheadNo2.jpeg' alt='Killboy Powerhead No. 2'>
-                    <p class='copyrightP'>Killboy Powerhead No. 2 © 2025 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-           <div class='archived-art watercolorAndInk'>
-                    <img src='scans/2025sharkPinup.jpeg' alt='Shark Pinup'>
-                    <p class='copyrightP'>Shark Pinup © 2025 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
+        <div id='gallery'>
         </div>
 
-        <div class='section-name'>Year 2024 </div>
-        <!-- <br> A year to explore watercolors with ink outlines. -->
-        <div class='gallery'>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024theAdventuresOfZeldaNo1.jpeg" alt="The Adventures of Zelda No. 1">
-                <p class='copyrightP'>The Adventures of Zelda No. 1 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024theAdventuresOfZeldaNo2.jpeg" alt="The Adventures of Zelda No. 2">
-                <p class='copyrightP'>The Adventures of Zelda No. 2 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024theAdventuresOfZeldaNo3.jpeg" alt="The Adventures of Zelda No. 3">
-                <p class='copyrightP'>The Adventures of Zelda No. 3 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024alexisDancer.jpeg" alt="Alexis the Dancer">
-                <p class='copyrightP'>Alexis the Dancer © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024cortanaFlashNo1.jpeg" alt="Cortana Flash No. 1">
-                <p class='copyrightP'>Cortana Flash No. 1 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024cortanaFlashNo2.jpeg" alt="Cortana Flash No. 2">
-                <p class='copyrightP'>Cortana Flash No. 2 © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024theElfWithTheDragonTattoo.jpeg" alt="The Elf with the Dragon Tattoo">
-                <p class='copyrightP'>The Elf with the Dragon Tattoo © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024dazedAndConfused.jpeg" alt="Dazed and Confused">
-                <p class='copyrightP'>Dazed and Confused © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024ruin.jpeg" alt="Ruin">
-                <p class='copyrightP'>Ruin © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img src="scans/2024zSpacegirl.jpeg" alt="Z the Spacegirl">
-                <p class='copyrightP'>Z the Spacegirl © 2024 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
+        <p class='copyrightP'>All works are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a></p>
 
-        <div class='section-name'>Year 2023 </div>
-        <!-- <br> A year to learn the basics of watercolors. -->
-        <div class='gallery'>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023laBailarina.jpeg' alt='La Bailarina'>
-                <p class='copyrightP'>La Bailarina © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art ink'>
-                <img loading='lazy' src='scans/2023theDancingOnionheadsScene.jpeg' alt="The Dancing Onionhead's Scene">
-                <p class='copyrightP'>The Dancing Onionhead's Scene © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023theForestScene.jpeg' alt='The Forest Scene'>
-                <p class='copyrightP'>The Forest Scene © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023beetleguiseFlash.jpeg' alt='Horror Flash'>
-                <p class='copyrightP'>Horror Flash © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img  loading='lazy'src='scans/2023inkbot.jpeg' alt='Inkbot'>
-                <p class='copyrightP'>Inkbot © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023theRoaringDancer.jpeg' alt='The Roaring Dancer'>
-                <p class='copyrightP'>The Roaring Dancer © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023theRobotTrainStationScene.jpeg' alt='The Robot Train Station Scene'>
-                <p class='copyrightP'>The Robot Train Station Scene © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023rolinsVampire.jpeg' alt="Rollin's Vampire">
-                <p class='copyrightP'>Rollin's Vampire © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023sproutingBoot.jpeg' alt='Sprouting Boot'>
-                <p class='copyrightP'>Sprouting Boot © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023starTease.jpeg' alt='Star Tease'>
-                <p class='copyrightP'>Star Tease © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023tattooedPinupNo1.jpeg' alt='Tattooed Pinup No. 1'>
-                <p class='copyrightP'>Tattooed Pinup No. 1 © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023tattooedPinupNo2.jpeg' alt='Tattooed Pinup No. 2'>
-                <p class='copyrightP'>Tattooed Pinup No. 2 © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023tattooedPinupNo3.jpeg' alt='Tattooed Pinup No. 3'>
-                <p class='copyrightP'>Tattooed Pinup No. 3 © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2023tattooedPinupNo4.jpeg' alt='Tattooed Pinup No. 4'>
-                <p class='copyrightP'>Tattooed Pinup No. 4 © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023theWomanInTheBlueDress.jpeg' alt='The Woman in the Blue Dress'>
-                <p class='copyrightP'>The Woman in the Blue Dress © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                <img loading='lazy' src='scans/2023zenAndTheArtOfRobotMaintenance.jpeg' alt='Zen and the Art of Robot Maintenance'>
-                <p class='copyrightP'>Zen and the Art of Robot Maintenance © 2023 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
-
-        <div class='section-name'>Year 2022 </div>
-        <div class='gallery'>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2022spaceBabe(Blue).jpg' alt='Space Babe (Blue)'>
-                    <p class='copyrightP'>Space Babe (Blue) © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2022spaceBabe(Green).jpg' alt='Space Babe (Green)'>
-                    <p class='copyrightP'>Space Babe (Green) © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2022spaceBabe(White).jpg' alt='Space Babe (White)'>
-                    <p class='copyrightP'>Space Babe (White) © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2022spaceBabe(Purple).jpg' alt='Space Babe (Purple)'>
-                    <p class='copyrightP'>Space Babe (Purple) © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                    <img loading='lazy' src='scans/2022aStudyInBloomNo1.jpeg' alt='A Study in Bloom No. 1'>
-                    <p class='copyrightP'>A Study in Bloom No. 1 © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                    <img loading='lazy' src='scans/2022aStudyInBloomNo2.jpeg' alt='A Study in Bloom No. 2'>
-                    <p class='copyrightP'>A Study in Bloom No. 2 © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolor'>
-                    <img loading='lazy' src='scans/2022aStudyInBloomNo3.jpeg' alt='A Study in Bloom No. 3'>
-                    <p class='copyrightP'>A Study in Bloom No. 3 © 2022 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
-
-        <div class='section-name'>Year 2021 </div>
-        <!-- <br> A year to discover what style, images, and mediums I like. -->
-        <div class='gallery'>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021amorcitoFlashSheet.jpeg' alt='Amorcito Flash Sheet'>
-                    <p class='copyrightP'>Amorcito Flash Sheet © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021coffeeFlashSheet.jpeg' alt='Coffee Flash Sheet'>
-                    <p class='copyrightP'>Coffee Flash Sheet © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021daphne.jpeg' alt='Daphne'>
-                    <p class='copyrightP'>Daphne © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021sallySupernova.jpeg' alt='Sally Supernova'>
-                    <p class='copyrightP'>Sally Supernova © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021throatpunch.jpeg' alt='Throat Punch'>
-                    <p class='copyrightP'>Throat Punch © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                    <img loading='lazy' src='scans/2021velma.jpeg' alt='Velma'>
-                    <p class='copyrightP'>Velma © 2021 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
-
-        <div class='section-name'>Year 2020 </div>
-         <!-- <br> A year to test the water(color)s. -->
-        <div class='gallery'>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2020coldPartner.jpeg' alt='Cold Partner'>
-                <p class='copyrightP'>Cold Partner © 2020 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-            <div class='archived-art watercolorAndInk'>
-                <img loading='lazy' src='scans/2020hotPartner.jpeg' alt='Hot Partner'>
-                <p class='copyrightP'>Hot Partner © 2020 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-             <div class='archived-art coloredPencil'>
-                <img loading='lazy' src='scans/2020lsd.jpg' alt='LSD'>
-                <p class='copyrightP'>LSD © 2020 is licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC-BY-NC-SA 4.0</a>. </p>
-            </div>
-        </div>
     </section><!--End Archive Content-->
 
     <!------------ Start About Content ------------>
@@ -647,5 +459,6 @@
     </footer>
 </body>
 <script src='https://kit.fontawesome.com/5721503876.js' crossorigin='anonymous'></script>
+
 <script src='index.js'></script>
 </html>

@@ -249,7 +249,7 @@ a:hover {
 }
 
 /* Section 3: Archive */
-.gallery {
+#gallery {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;
@@ -264,6 +264,9 @@ a:hover {
 }
 .archived-art img {
   width: 100%;
+}
+.myTitle {
+  font-size: 14px;
 }
 #filter-bar {
   color: #445881;
