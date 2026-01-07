@@ -4,10 +4,9 @@ Color scheme:
 *Pale Blue #445881
 *Purple #7b6992
 *Pink #b17aa2
- Fuschia #e88bb3
  white
- darkgrey
- black
+ lightgray
+ darkgray
 
 */
 
@@ -273,16 +272,29 @@ a:hover {
   margin: 0px auto 50px auto;
   width: 80%;
 }
-.filter-btn {
-  /* background-color: darkgrey; */
+.filter-btn, #open-filter-btn {
+  background-color: lightgray;
   border: none;
   border-radius: 10px;
+  color: #0d4771;
   font-size: 14px;
   margin: 7px 5px;
   padding: 10px 7px;
 }
-.filter-btn:hover {
-  background-color: #445881;
+.see-archive-btn {
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  color: #0d4771;
+  font-size: 14px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 80%;
+}
+.filter-btn:hover, .see-archive-btn:hover, #open-filter-btn:hover {
+  background-color: #0d4771;
   color: white;
 }
 .filter-btn.filtered {

@@ -219,39 +219,12 @@
     <!------------ Start Archive Content ------------>
     <section id='archive-content' class='hidden'>
         <div class='page-intro'>
-            <p>This archive contains works from 2020 until 2025.</p>
+            <p>This archive contains works from 2015 to 2025.</p>
         </div>
 
         <hr>
-        <p id='filter-bar'>
-            Filter by media:
-            <button id='all-btn' class='filter-btn' onclick="openArchive()">All Works</button>
-            <button id='watercolorAndInk-btn' class='filter-btn' onclick="openArchive(['watercolor', 'ink'], 'mediaFilter')">Watercolor and Ink</button>
-            <button id='watercolor-btn' class='filter-btn' onclick="openArchive(['watercolor'], 'mediaFilter')">Watercolors</button>
-            <button id='ink-btn' class='filter-btn' onclick="openArchive(['ink'], 'mediaFilter')">Ink</button>
-            <button id='coloredPencil-btn' class='filter-btn' onclick="openArchive(['colored pencil'], 'mediaFilter')">Colored Pencil</button>
-            <button id='coloredPencil-btn' class='filter-btn' onclick="openArchive(['colored pencil', 'ink'], 'mediaFilter')">Colored Pencil and Ink</button> <br>
-            Filter by tag:
-            <button class='filter-btn' onclick="openArchive('cat', 'tagFilter')">cat</button>
-            <button class='filter-btn' onclick="openArchive('comic', 'tagFilter')">comic</button>
-            <button class='filter-btn' onclick="openArchive('dancer', 'tagFilter')">dancer</button>
-            <button class='filter-btn' onclick="openArchive('fantasy', 'tagFilter')">fantasy</button>
-            <button class='filter-btn' onclick="openArchive('flash', 'tagFilter')">flash</button>
-            <button class='filter-btn' onclick="openArchive('floral', 'tagFilter')">floral</button>
-            <button class='filter-btn' onclick="openArchive('hand lettering', 'tagFilter')">hand lettering</button>
-            <button class='filter-btn' onclick="openArchive('learning exercise', 'tagFilter')">learning exercise</button>
-            <button class='filter-btn' onclick="openArchive('local scene', 'tagFilter')">local scene</button>
-            <button class='filter-btn' onclick="openArchive('music', 'tagFilter')">music</button>
-            <button class='filter-btn' onclick="openArchive('music lyrics', 'tagFilter')">music lyrics</button>
-            <button class='filter-btn' onclick="openArchive('pin up', 'tagFilter')">pin up</button>
-            <button class='filter-btn' onclick="openArchive('pop culture', 'tagFilter')">pop culture</button>
-            <button class='filter-btn' onclick="openArchive('robot babe', 'tagFilter')">robot babe</button>
-            <button class='filter-btn' onclick="openArchive('science fiction', 'tagFilter')">science fiction</button>
-            <button class='filter-btn' onclick="openArchive('slice of life', 'tagFilter')">slice of life</button>
-            <button class='filter-btn' onclick="openArchive('space babe', 'tagFilter')">space babe</button>
-            <button class='filter-btn' onclick="openArchive('still life', 'tagFilter')">still life</button>
-            <button class='filter-btn' onclick="openArchive('surreal', 'tagFilter')">surreal</button>
-            <button class='filter-btn' onclick="openArchive('traditional American tattoo', 'tagFilter')">traditional American tattoo</button>
+        <button id='open-filter-btn' onclick="openArchiveFilter()">Filter by...</button>
+        <p id='filter-bar' class='hidden'>
         </p>
 
         <div id='gallery'>

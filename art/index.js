@@ -47,7 +47,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor paper',
         height: 12,
         width: 9,
-        tags: ['pop culture', 'hand lettering'],
+        tags: ['pop culture', 'hand-lettering'],
         fileName: '2024theAdventuresOfZeldaNo1'
     },
     {title: 'The Adventures of Zelda No. 2',
@@ -57,7 +57,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor paper',
         height: 12,
         width: 9,
-        tags: ['pop culture', 'hand lettering'],
+        tags: ['pop culture', 'hand-lettering'],
         fileName: '2024theAdventuresOfZeldaNo2'
     },
     {title: 'The Adventures of Zelda No. 3',
@@ -67,7 +67,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor paper',
         height: 12,
         width: 9,
-        tags: ['pop culture', 'hand lettering'],
+        tags: ['pop culture', 'hand-lettering'],
         fileName: '2024theAdventuresOfZeldaNo3'
     },
     {title: 'The Aerialist',
@@ -117,7 +117,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['flash', 'traditional American tattoo', 'hand lettering'],
+        tags: ['flash', 'traditional American tattoo', 'hand-lettering'],
         fileName: '2021amorcitoFlashSheet'
     },
     {title: 'Arachnids',
@@ -127,7 +127,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor journal',
         height: 3.5,
         width: 5.5,
-        tags: ['hand lettering'],
+        tags: ['hand-lettering'],
         fileName: '2025arachnids'
     },
     {title: 'La Bailarina',
@@ -140,15 +140,35 @@ const scansCatalogue = [
         tags: ['dancer'],
         fileName: '2023laBailarina'
     },
-    {title: 'Miau',
+    {title: 'Blue Bloom',
         partOfSeries: '',
-        year: 2024,
+        year: 2016,
+        medium: ['acrylic'],
+        paintedOn: 'Canvas on wooden frame',
+        height: 2.5,
+        width: 2.5,
+        tags: ['floral'],
+        fileName: '2016blueBloom'
+    },
+    {title: 'Blue Flower',
+        partOfSeries: 'Purple Flash Cards',
+        year: 2023,
         medium: ['watercolor', 'ink'],
-        paintedOn: 'Cotton paper with vellum finish',
-        height: 12,
-        width: 8.5,
+        paintedOn: 'Watercolor postcard',
+        height: 4,
+        width: 6,
+        tags: ['floral'],
+        fileName: '2023blueFlower'
+    },
+    {title: 'Blob cats 23',//TODO
+        partOfSeries: '',
+        year: 2023,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor paper',
+        height: 0,
+        width: 0,
         tags: ['creative exercise', 'blob painting', 'cat'],
-        fileName: '2024miau'
+        fileName: '2023blobCats'
     },
     {title: 'Blob cats 24',
         partOfSeries: '',
@@ -159,6 +179,16 @@ const scansCatalogue = [
         width: 5.5,
         tags: ['creative exercise', 'blob painting', 'cat'],
         fileName: '2024blobCats'
+    },
+    {title: 'Can can dancer',
+        partOfSeries: '',
+        year: 2018,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Page from book',
+        height: 12,
+        width: 9,
+        tags: ['pin up', 'dancer'],
+        fileName: '2018canCanDancer'
     },
     {title: 'Coffee Bound', //TODO
         partOfSeries: '',
@@ -177,7 +207,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['flash', 'traditional American tattoo', 'hand lettering'],
+        tags: ['flash', 'traditional American tattoo', 'hand-lettering'],
         fileName: '2021coffeeFlashSheet'
     },
     {title: 'Cold Partner',
@@ -207,7 +237,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor paper',
         height: 12,
         width: 9,
-        tags: ['flash', 'traditional American tattoo', 'pin up', 'pop culture', 'hand lettering'],
+        tags: ['flash', 'traditional American tattoo', 'pin up', 'pop culture', 'hand-lettering'],
         fileName: '2024cortanaFlashNo1'
     },
     {title: 'Cortana Flash No. 2',
@@ -217,7 +247,7 @@ const scansCatalogue = [
         paintedOn: 'Watercolor paper',
         height: 12,
         width: 9,
-        tags: ['flash', 'traditional American tattoo', 'pin up', 'pop culture', 'hand lettering'],
+        tags: ['flash', 'traditional American tattoo', 'pin up', 'pop culture', 'hand-lettering'],
         fileName: '2024cortanaFlashNo2'
     },
     {title: 'Crybaby Flash',
@@ -250,6 +280,26 @@ const scansCatalogue = [
         tags: ['surreal'],
         fileName: '2023theDancingOnionheadsScene'
     },
+    {title: 'Dance',
+        partOfSeries: '',
+        year: 2020,
+        medium: ['ink'],
+        paintedOn: 'Resumé paper',
+        height: 0,
+        width: 0,
+        tags: ['dancer', 'hand-lettering'],
+        fileName: '2020dance'
+    },
+    {title: 'Dancer in the rain', //TODO
+        partOfSeries: '',
+        year: 2015,
+        medium: ['acrylic'],
+        paintedOn: 'Journal',
+        height: 0,
+        width: 0,
+        tags: ['dancer'],
+        fileName: '2015dancerInTheRain'
+    },
     {title: 'Daphne',
         partOfSeries: 'Daphne and Velma',
         year: 2021,
@@ -267,7 +317,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['comic', 'pop culture', 'music lyrics', 'hand lettering'],
+        tags: ['comic', 'pop culture', 'music lyrics', 'hand-lettering'],
         fileName: '2024dazedAndConfused'
     },
     {title: 'The Elf with the Dragon Tattoo',
@@ -297,7 +347,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['fantasy', 'hand lettering'],
+        tags: ['fantasy', 'hand-lettering'],
         fileName: '2024theFates'
     },
     {title: 'Fish Legs',
@@ -307,8 +357,18 @@ const scansCatalogue = [
         paintedOn: 'Calligraphy writing paper',
         height: 8.5,
         width: 11,
-        tags: ['flash', 'pin up', 'traditional American tattoo', 'hand lettering'],
+        tags: ['flash', 'pin up', 'traditional American tattoo', 'hand-lettering'],
         fileName: '2025fishLegs'
+    },
+    {title: 'Food-gasm',
+        partOfSeries: '',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Resumé paper',
+        height: 8.5,
+        width: 11,
+        tags: ['outline'],
+        fileName: '2018foodgasm'
     },
     {title: 'La Gitana',
         partOfSeries: '',
@@ -320,6 +380,16 @@ const scansCatalogue = [
         tags: ['dancer'],
         fileName: '2024laGitana'
     },
+    {title: 'Gypsy Flash',
+        partOfSeries: 'Purple Flash Cards',
+        year: 2022,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 6,
+        width: 4,
+        tags: ['traditional American tattoo', 'flash'],
+        fileName: '2022gypsyFlash'
+    },
     {title: 'The Forest Scene',
         partOfSeries: '',
         year: 2023,
@@ -329,6 +399,16 @@ const scansCatalogue = [
         width: 8.5,
         tags: ['fantasy'],
         fileName: '2023theForestScene'
+    },
+    {title: 'Hell Raiser Flash',
+        partOfSeries: '',
+        year: 2021,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Cotton paper with vellum finish',
+        height: 12,
+        width: 8.5,
+        tags: ['traditional American tattoo', 'flash'],
+        fileName: '2021hellRaiserFlash'
     },
     {title: 'Home Cat',
         partOfSeries: '',
@@ -387,7 +467,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['music', 'hand lettering'],
+        tags: ['music', 'hand-lettering'],
         fileName: '2025ingredientes'
     },
     {title: 'Killboy Powerhead No. 1',
@@ -397,7 +477,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['music lyrics', 'hand lettering'],
+        tags: ['music lyrics', 'hand-lettering'],
         fileName: '2025killboyPowerheadNo1'
     },
     {title: 'Killboy Powerhead No. 2',
@@ -407,7 +487,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['music lyrics', 'hand lettering', 'pin up'],
+        tags: ['music lyrics', 'hand-lettering', 'pin up'],
         fileName: '2025killboyPowerheadNo2'
     },
     {title: 'Kitty',
@@ -419,6 +499,76 @@ const scansCatalogue = [
         width: 5.5,
         tags: ['cat'],
         fileName: '2025kitty'
+    },
+    {title: 'Kitty Greetings No. 1',
+        partOfSeries: 'Kitty Greetings',
+        year: 2019,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 4,
+        width: 6,
+        tags: ['cat', 'hand-lettering'],
+        fileName: '2019kittyGreetingsNo1'
+    },
+    {title: 'Kitty Greetings No. 2',
+        partOfSeries: 'Kitty Greetings',
+        year: 2019,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 4,
+        width: 6,
+        tags: ['cat', 'hand-lettering'],
+        fileName: '2019kittyGreetingsNo2'
+    },
+    {title: 'Kitty Greetings No. 3',
+        partOfSeries: 'Kitty Greetings',
+        year: 2019,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 4,
+        width: 6,
+        tags: ['cat', 'hand-lettering'],
+        fileName: '2019kittyGreetingsNo3'
+    },
+    {title: 'Knit fast. Die warm.',
+        partOfSeries: '',
+        year: 2020,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 4,
+        width: 6,
+        tags: ['hand-lettering'],
+        fileName: '2020knitFastDieWarm'
+    },
+    {title: 'Knuckle Outlines',
+        partOfSeries: '',
+        year: 2021,
+        medium: ['ink'],
+        paintedOn: 'Calligraphy writing paper',
+        height: 11,
+        width: 8.5,
+        tags: ['hand-lettering', 'flash', 'traditional American Tattoo'],
+        fileName: '2021knuckleOutlines'
+    },
+    {title: 'Larry Longskull',
+        partOfSeries: '',
+        year: 2016,
+        medium: ['acrylic'],
+        paintedOn: 'Canvas on wooden frame',
+        height: 3,
+        width: 2,
+        tags: [''],
+        fileName: '2016larryLongskull'
+    },
+    {title: 'Love',
+        partOfSeries: '',
+        year: 2015,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Journal',
+        height: 0,
+        width: 0,
+        tags: ['hand-lettering'],
+        fileName: '2015love'
     },
     {title: 'Love Wolf',
         partOfSeries: '',
@@ -437,8 +587,18 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['comic', 'hand lettering'],
+        tags: ['comic', 'hand-lettering'],
         fileName: '2020lsd'
+    },
+    {title: 'Madre Tierra',
+        partOfSeries: '',
+        year: 2015,
+        medium: ['colored pencil'],
+        paintedOn: 'Paper',
+        height: 0,
+        width: 0,
+        tags: [],
+        fileName: '2015madreTierra'
     },
     {title: 'Merfolk',
         partOfSeries: '',
@@ -447,7 +607,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['fantasy', 'hand lettering'],
+        tags: ['fantasy', 'hand-lettering'],
         fileName: '2024merfolk'
     },
     {title: "The Mermaid's Transformation Scene",
@@ -460,6 +620,26 @@ const scansCatalogue = [
         tags: ['fantasy'],
         fileName: '2023theMermaidsTransformationScene'
     },
+    {title: 'Mermaid Rider',//TODO
+        partOfSeries: '',
+        year: 2022,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Paper',
+        height: 0,
+        width: 0,
+        tags: ['traditional American tattoo', 'pin up'],
+        fileName: '2022mermaidRider'
+    },
+    {title: 'Miau',
+        partOfSeries: '',
+        year: 2024,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Cotton paper with vellum finish',
+        height: 12,
+        width: 8.5,
+        tags: ['creative exercise', 'blob painting', 'cat'],
+        fileName: '2024miau'
+    },
     {title: 'On the Skull',
         partOfSeries: '',
         year: 2024,
@@ -469,6 +649,16 @@ const scansCatalogue = [
         width: 3.5,
         tags: ['traditional American tattoo', 'flash'],
         fileName: '2024onTheSkull'
+    },
+    {title: 'Party like hobbits',
+        partOfSeries: '',
+        year: 2020,
+        medium: ['colored pencil', 'ink'],
+        paintedOn: 'Resumé paper',
+        height: 0,
+        width: 0,
+        tags: ['hand-lettering', 'pop culture'],
+        fileName: '2020partyLikeHobbits'
     },
     {title: 'La Pingüina',
         partOfSeries: '',
@@ -480,6 +670,16 @@ const scansCatalogue = [
         tags: ['pin up'],
         fileName: '2024laPinguina'
     },
+    {title: 'Piropos',
+        partOfSeries: '',
+        year: 2021,
+        medium: ['ink'],
+        paintedOn: 'Resumé paper',
+        height: 0,
+        width: 0,
+        tags: ['hand-lettering'],
+        fileName: '2021piropos'
+    },
     {title: 'Photo Exercise',
         partOfSeries: '',
         year: 2025,
@@ -489,6 +689,16 @@ const scansCatalogue = [
         width: 3.5,
         tags: ['learning exercise'],
         fileName: '2025photoExercise'
+    },
+    {title: 'Poison Flash',
+        partOfSeries: 'Purple Flash Cards',
+        year: 2022,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor postcard',
+        height: 6,
+        width: 4,
+        tags: ['traditional American tattoo', 'flash'],
+        fileName: '2022poisonFlash'
     },
     {title: 'Portrait in Six Layers',
         partOfSeries: '',
@@ -519,6 +729,26 @@ const scansCatalogue = [
         width: 12,
         tags: ['pin up'],
         fileName: '2023thePumpkinThief'
+    },
+    {title: 'Rhonda the Human and Nadja the Dragon 15',
+        partOfSeries: 'Rhonda and Nadja',
+        year: 2015,
+        medium: ['colored pencil'],
+        paintedOn: 'Paper',
+        height: 0,
+        width: 0,
+        tags: ['fantasy'],
+        fileName: '2015rhondaTheHumanAndNadjaTheDragon'
+    },
+    {title: 'Rhonda the Human and Nadja the Dragon 22',
+        partOfSeries: 'Rhonda and Nadja',
+        year: 2022,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Cotton paper with vellum finish',
+        height: 0,
+        width: 0,
+        tags: ['fantasy'],
+        fileName: '2022rhondaTheHumanAndNadjaTheDragon'
     },
     {title: 'The Roaring Dancer',
         partOfSeries: '',
@@ -577,7 +807,7 @@ const scansCatalogue = [
         paintedOn: 'Cotton paper with vellum finish',
         height: 12,
         width: 8.5,
-        tags: ['space babe', 'pin up', 'science fiction', 'hand lettering'],
+        tags: ['space babe', 'pin up', 'science fiction', 'hand-lettering'],
         fileName: '2021sallySupernova'
     },
     {title: 'Shark Pinup',
@@ -728,7 +958,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: [''],
-        fileName: '2021throatPunch'
+        fileName: '2021throatpunch'
     },
     {title: 'Tools of Witchcraft and Sorcery',
         partOfSeries: '',
@@ -740,6 +970,16 @@ const scansCatalogue = [
         tags: ['traditional American tattoo'],
         fileName: '2022toolsOfWitchcraftAndSorcery'
     },
+    {title: 'Unamused kitties', //TODO
+        partOfSeries: '',
+        year: 2021,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Watercolor paper',
+        height: 0,
+        width: 0,
+        tags: ['cat'],
+        fileName: '2021unamusedKitties'
+    },
     {title: 'Velma',
         partOfSeries: 'Daphne and Velma',
         year: 2021,
@@ -750,6 +990,36 @@ const scansCatalogue = [
         tags: ['space babe', 'pin up', 'science fiction', 'pop culture'],
         fileName: '2021velma'
     },
+    {title: 'Wild Child',
+        partOfSeries: '',
+        year: 2021,
+        medium: ['colored pencil', 'ink'],
+        paintedOn: 'Cotton paper with vellum finish',
+        height: 12,
+        width: 8.5,
+        tags: ['traditional American tattoo', 'flash', 'pin up', 'hand-lettering'],
+        fileName: '2021wildChildFlash'
+    },
+    {title: 'Wild Wigs',
+        partOfSeries: '',
+        year: 2016,
+        medium: ['acrylic'],
+        paintedOn: 'Canvas on wooden frame',
+        height: 2.5,
+        width: 2.5,
+        tags: ['fantasy'],
+        fileName: '2016wildWigs'
+    },
+    {title: 'Witchcraft and Wizardry War',
+        partOfSeries: '',
+        year: 2016,
+        medium: ['acrylic'],
+        paintedOn: 'Canvas on wooden frame',
+        height: 2.5,
+        width: 2.5,
+        tags: ['fantasy'],
+        fileName: '2016witchcraftAndWizardryWar'
+    },
     {title: 'The Woman in the Blue Dress',
         partOfSeries: '',
         year: 2023,
@@ -759,6 +1029,16 @@ const scansCatalogue = [
         width: 12,
         tags: [],
         fileName: '2023theWomanInTheBlueDress'
+    },
+    {title: 'Yin Yang Cats',
+        partOfSeries: '',
+        year: 2020,
+        medium: ['ink'],
+        paintedOn: 'Page from book',
+        height: 12,
+        width: 9,
+        tags: ['cat'],
+        fileName: '2020yinYangCats'
     },
     {title: 'Z the Spacegirl',
         partOfSeries: '',
@@ -781,46 +1061,63 @@ const scansCatalogue = [
         fileName: '2023zenAndTheArtOfRobotMaintenance'
     },
 ]
-function openArchive(tagToShow = [], tagType = '') {
-  const sortedScans = scansCatalogue.sort((a, b) => a.year < b.year)
-  //TODO Also sort alphabetically
 
-  //Apply filter
-  let scansToDisplay = []
-  if (tagToShow.length === 0) { //No filters to apply
-    scansToDisplay = sortedScans
-  } else if (tagType === 'mediaFilter') { //Filter by media
-    let doInclude
-    sortedScans.forEach(scan => {
-        doInclude = true
-        scan.medium.forEach(eaMedium => {
-            if (!tagToShow.includes(eaMedium)) {
-                doInclude = false
-            }
-        })
-        tagToShow.forEach(eaTag => {
-            if (!scan.medium.includes(eaTag)) {
-                doInclude = false
-            }
-        })
-        if (doInclude) {
-            scansToDisplay.push(scan)
+//Opening/filtering in the archive
+const mediaTags = []
+const tagTags = []
+scansCatalogue.forEach(scanObj => {
+    const mediaStr = scanObj.medium.join('+').replaceAll(' ', '_')
+    if (!mediaTags.includes(mediaStr)) {
+        mediaTags.push(mediaStr)
+    }
+    scanObj.tags.forEach(tagName => {
+        if (!tagTags.includes(tagName) && tagName.length > 0) {
+            tagTags.push(tagName)
         }
     })
-  } else if (tagType === 'tagFilter') {//Filter by tag
-    scansToDisplay = sortedScans.filter(scan => scan.tags.includes(tagToShow))
-  }
+})
+const yearNums = new Set(scansCatalogue.map(scan => scan.year))
+const yearArr = [...yearNums].sort((a, b) => a < b)
+function openArchive(tagToShow = '', tagType = '') {
+  //Write #filter-bar with .media and .tags fields in scansCatalogue
+    let filterContent = `Filter by media:`
+    mediaTags.forEach((tagName, i) => {
+        filterContent += `
+        <button class='filter-btn' onclick="openArchive('${tagName}', 'mediaFilter'); activateBtn(${i});">${tagName.replaceAll('_', ' ').replaceAll('+', ' and ')}</button>`
+    })
+    filterContent += `<br>
+            Filter by tag:`
+    tagTags.forEach((tagName, i) => {
+        filterContent += `
+            <button class='filter-btn' onclick="openArchive('${tagName}', 'tagFilter'); activateBtn(${mediaTags.length + i});">${tagName}</button>`
+    })
+    document.getElementById('filter-bar').innerHTML = filterContent + `<br>
+    <button class='see-archive-btn' onclick="openArchive(); closeArchiveFilter();">See all</button>`
 
+    //Organize by year (and alphabetically)
+    const organizedScans = []
+    for (let i = 0; i < yearArr.length; i++) {
+        const yearlyArr = scansCatalogue.filter(scan => scan.year === yearArr[i])
+        const scansToDisplay = []
+        yearlyArr.forEach(scanObj => {
+            if ((tagType === 'mediaFilter' && scanObj.medium.join('+').replaceAll(' ', '_') === tagToShow)
+                || (tagType === 'tagFilter' && scanObj.tags.includes(tagToShow))
+                || tagType.length === 0) {
+                scansToDisplay.push(scanObj)
+            }
+        })
+        organizedScans.push(...scansToDisplay)
+    }
+
+  //Write to the 'gallery' div
   const myGallery = document.getElementById('gallery')
   myGallery.innerHTML = ''
-  scansToDisplay.forEach((scannedImg, i) => {
+  organizedScans.forEach((scannedImg, i) => {
     //Get data of painting
-    const {title, partOfSeries, year, medium, paintedOn, height, width, tags, fileName} = scannedImg
+    const {title, partOfSeries, year, medium, paintedOn, height, width, fileName} = scannedImg
     let mediaList = medium[0][0].toUpperCase() + medium[0].slice(1)
     if (medium.length === 2) {
       mediaList += ' and ' + medium[1]
-    } else if (medium.length === 3) {
-      mediaList += ', ' + medium[1] + ' and ' + medium[2]
     }
     const dimensionsInIn = height === 0 ? '' : `${height} x ${width} inches`
 
@@ -838,7 +1135,25 @@ function openArchive(tagToShow = [], tagType = '') {
     </div>`
     myGallery.innerHTML += archivedArtDiv
   })
-
+}
+function openArchiveFilter() {
+    const openFilterBtn = document.getElementById('open-filter-btn')
+    openFilterBtn.classList.add('hidden')
+    const archiveFilter = document.getElementById('filter-bar')
+    archiveFilter.classList.remove('hidden')
+}
+function closeArchiveFilter() {
+    const openFilterBtn = document.getElementById('open-filter-btn')
+    openFilterBtn.classList.remove('hidden')
+    const archiveFilter = document.getElementById('filter-bar')
+    archiveFilter.classList.add('hidden')
+}
+function activateBtn(indx) {
+    const filterBtns = document.getElementsByClassName('filter-btn')
+    for(let i = 0; i < filterBtns.length; i++) {
+        filterBtns[i].classList.remove('filtered')
+    }
+    filterBtns[indx].classList.add('filtered')
 }
 
 //Top navigational bar
@@ -929,42 +1244,6 @@ function activate(sectionID, fromFooter = false) {
   if(!fromFooter) {
   toggleMobileMenu()
   }
-}
-
-//Filter works in archive
-function applyFilter(paintType) {
-
-  //Change style of btn
-  const fBtns = document.getElementsByClassName('filter-btn')
-  for (let i = 0; i < fBtns.length; i++) {
-      if (fBtns[i].classList.contains('filtered')) {
-        fBtns[i].classList.remove('filtered')
-      }
-  }
-  const activeBtn = document.getElementById(paintType + '-btn')
-  activeBtn.classList.add('filtered')
-
-  //Show/hide each painting in the gallery
-  const artPieces = document.getElementsByClassName('archived-art')
-  for (let i = 0; i < artPieces.length; i++) {
-    if (artPieces[i].classList.contains(paintType) || paintType === 'all') {
-      artPieces[i].style.display = ''
-    } else {
-      artPieces[i].style.display = 'none'
-    }
-  }
-
-  //Show/hide year summaries
-  // const yearSummaries = document.getElementsByClassName('year-summary')
-  // if (paintType === 'all') {
-  //   for(let i = 0; i < yearSummaries.length; i++) {
-  //     yearSummaries[i].style.display = ''
-  //   }
-  // } else {
-  //   for(let i = 0; i < yearSummaries.length; i++) {
-  //     yearSummaries[i].style.display = 'none'
-  //   }
-  // }
 }
 
 //Open a blog post
