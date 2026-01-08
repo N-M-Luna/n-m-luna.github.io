@@ -272,6 +272,10 @@ a:hover {
   margin: 0px auto 50px auto;
   width: 80%;
 }
+#filter-bar button:hover, #open-filter-btn:hover {
+  background-color: #0d4771;
+  color: white;
+}
 .filter-btn, #open-filter-btn {
   background-color: lightgray;
   border: none;
@@ -281,21 +285,27 @@ a:hover {
   margin: 7px 5px;
   padding: 10px 7px;
 }
-.see-archive-btn {
+#open-filter-btn {
+  margin-bottom: -150px;
+}
+.see-archive-btn, .close-archive-filter-btn {
   background-color: lightgray;
   border: none;
   border-radius: 10px;
   color: #0d4771;
   font-size: 14px;
-  margin-bottom: 30px;
+  width: 80%;
+}
+.see-archive-btn {
   margin-top: 30px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 80%;
 }
-.filter-btn:hover, .see-archive-btn:hover, #open-filter-btn:hover {
-  background-color: #0d4771;
-  color: white;
+.close-archive-filter-btn {
+  margin-bottom: -150px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .filter-btn.filtered {
   background-color: #7b6992;

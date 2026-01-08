@@ -547,7 +547,7 @@ const scansCatalogue = [
         paintedOn: 'Calligraphy writing paper',
         height: 11,
         width: 8.5,
-        tags: ['hand-lettering', 'flash', 'traditional American Tattoo'],
+        tags: ['hand-lettering', 'flash', 'traditional American tattoo'],
         fileName: '2021knuckleOutlines'
     },
     {title: 'Larry Longskull',
@@ -1080,19 +1080,20 @@ const yearNums = new Set(scansCatalogue.map(scan => scan.year))
 const yearArr = [...yearNums].sort((a, b) => a < b)
 function openArchive(tagToShow = '', tagType = '') {
   //Write #filter-bar with .media and .tags fields in scansCatalogue
-    let filterContent = `Filter by media:`
+    let filterContent = `<p>Filter by media:</p>`
     mediaTags.forEach((tagName, i) => {
         filterContent += `
         <button class='filter-btn' onclick="openArchive('${tagName}', 'mediaFilter'); activateBtn(${i});">${tagName.replaceAll('_', ' ').replaceAll('+', ' and ')}</button>`
     })
     filterContent += `<br>
-            Filter by tag:`
+            <p>Filter by tag:</p>`
     tagTags.forEach((tagName, i) => {
         filterContent += `
             <button class='filter-btn' onclick="openArchive('${tagName}', 'tagFilter'); activateBtn(${mediaTags.length + i});">${tagName}</button>`
     })
     document.getElementById('filter-bar').innerHTML = filterContent + `<br>
-    <button class='see-archive-btn' onclick="openArchive(); closeArchiveFilter();">See all</button>`
+    <button class='see-archive-btn' onclick="openArchive(); closeArchiveFilter();">See all</button>
+    <button class='close-archive-filter-btn' onclick='closeArchiveFilter()'> Close filters </button>`
 
     //Organize by year (and alphabetically)
     const organizedScans = []
