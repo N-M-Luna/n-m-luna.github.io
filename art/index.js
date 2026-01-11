@@ -848,7 +848,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: [],
-        fileName: '2020plumaYtinetero'
+        fileName: '2020plumaYtintero'
     },
     {title: 'Poison Flash',
         partOfSeries: 'Purple Flash Cards',
@@ -1148,7 +1148,7 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['floral', 'learning exercise', 'outline'],
-        fileName: '2022aStudyInBloomOutlineNo1'
+        fileName: '2021aStudyInBloomOutlineNo1'
     },
     {title: 'A Study in Bloom (Outlines) No. 2',
         partOfSeries: '',
@@ -1158,7 +1158,7 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['floral', 'learning exercise', 'outline'],
-        fileName: '2022aStudyInBloomOutlineNo2'
+        fileName: '2021aStudyInBloomOutlineNo2'
     },
     {title: 'A Study in Bloom (Outlines) No. 3',
         partOfSeries: '',
@@ -1168,7 +1168,7 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['floral', 'learning exercise', 'outline'],
-        fileName: '2022aStudyInBloomOutlineNo3'
+        fileName: '2021aStudyInBloomOutlineNo3'
     },
     {title: 'The Swan',
         partOfSeries: '',

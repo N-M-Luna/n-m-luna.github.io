@@ -1,0 +1,27 @@
+body {
+    background-color: #23596d;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+a {
+    color: white;
+}
+a:hover, .a-like-span:hover {
+    color: #ed8772;
+}
+.a-like-span.underlined {
+    text-decoration: underline;
+}
+h1 {
+    font-size: 30px;
+}
+p {
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 50px;
+}
+.blue-text {
+    font-size: 14px;
+    color: #87bcc7;
+}
