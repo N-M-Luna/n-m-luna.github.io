@@ -268,7 +268,7 @@ const scansCatalogue = [
         height: 12,
         width: 9,
         tags: ['flash', 'traditional American tattoo', 'pin up', 'pop culture', 'hand-lettering'],
-        fileName: '2024cortanaFlashNo2'
+        fileName: '2024cortanaFlashNo2',
     },
     {title: 'Crybaby Flash',
         partOfSeries: '',
@@ -328,7 +328,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: ['space babe', 'pin up', 'science fiction', 'pop culture'],
-        fileName: '2021daphne'
+        fileName: '2021daphne',
     },
     {title: 'Dazed and Confused',
         partOfSeries: '',
@@ -588,7 +588,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: ['music', 'hand-lettering'],
-        fileName: '2025ingredientes'
+        fileName: '2025ingredientes',
     },
     {title: 'Julieta',
         partOfSeries: '',
@@ -1068,7 +1068,7 @@ const scansCatalogue = [
         height: 12,
         width: 9,
         tags: ['space babe', 'pin up', 'science fiction'],
-        fileName: '2022spaceBabe(White)'
+        fileName: '2022spaceBabe(White)',
     },
     {title: 'Sprouting Boot',
         partOfSeries: '',
@@ -1238,7 +1238,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: [''],
-        fileName: '2021throatpunch'
+        fileName: '2021throatpunch',
     },
      {title: 'Throat Punch Outline',
         partOfSeries: '',
@@ -1348,7 +1348,7 @@ const scansCatalogue = [
         height: 8.5,
         width: 12,
         tags: ['science fiction', 'space babe', 'pin up'],
-        fileName: '2024zSpacegirl'
+        fileName: '2024zSpacegirl',
     },
     {title: 'Zen and the Art of Robot Maintenance',
         partOfSeries: '',
@@ -1378,6 +1378,13 @@ scansCatalogue.forEach(scanObj => {
 })
 const yearNums = new Set(scansCatalogue.map(scan => scan.year))
 const yearArr = [...yearNums].sort((a, b) => a < b)
+const writeMediaList = (mediaArr) => {
+    let mediaList = mediaArr[0][0].toUpperCase() + mediaArr[0].slice(1)
+    if (mediaArr.length === 2) {
+      mediaList += ' and ' + mediaArr[1]
+    }
+    return mediaList
+}
 function openArchive(tagToShow = '', tagType = '') {
   //Write #filter-bar with .media and .tags fields in scansCatalogue
     let filterContent = `<p>Filter by media:</p>`
@@ -1387,7 +1394,7 @@ function openArchive(tagToShow = '', tagType = '') {
     })
     filterContent += `<br>
             <p>Filter by tag:</p>`
-    tagTags.forEach((tagName, i) => {
+    tagTags.sort().forEach((tagName, i) => {
         filterContent += `
             <button class='filter-btn' onclick="openArchive('${tagName}', 'tagFilter'); activateBtn(${mediaTags.length + i});">${tagName}</button>`
     })
@@ -1416,10 +1423,7 @@ function openArchive(tagToShow = '', tagType = '') {
   organizedScans.forEach((scannedImg, i) => {
     //Get data of painting
     const {title, partOfSeries, year, medium, paintedOn, height, width, fileName} = scannedImg
-    let mediaList = medium[0][0].toUpperCase() + medium[0].slice(1)
-    if (medium.length === 2) {
-      mediaList += ' and ' + medium[1]
-    }
+    const mediaList = writeMediaList(medium)
     const dimensionsInIn = height === 0 ? '' : `${height} x ${width} inches`
 
     //Build and push the art div
@@ -1565,7 +1569,6 @@ function openBlogPost(postID) {
   const backToIndexBtn = document.getElementById('back-to-index-btn')
   backToIndexBtn.classList.remove('hidden')
 }
-
 //Open all blog posts
 function goBackToBlog() {
   //Show blog index and hide full blog posts
@@ -1581,6 +1584,207 @@ function goBackToBlog() {
   //hide Back to Index btn
   const backToIndexBtn = document.getElementById('back-to-index-btn')
   backToIndexBtn.classList.add('hidden')
+}
+
+//Open shop
+const printsCatalogue = [
+    {fileName: '2022spaceBabe(Blue)',
+        title: 'Space Babe (Blue)',
+        partOfSeries: 'OG Space Babes',
+        year: 2022,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 1,
+    },
+    {fileName: '2022spaceBabe(Green)',
+        title: 'Space Babe (Green)',
+        partOfSeries: 'OG Space Babes',
+        year: 2022,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 1,
+    },
+    {fileName: '2022spaceBabe(Purple)',
+        title: 'Space Babe (Purple)',
+        year: 2022,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 1,
+    },
+    {fileName: '2022spaceBabe(White)',
+        title: 'Space Babe (White)',
+        year: 2022,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 1,
+    },
+    {fileName: '2025fishLegsNo1',
+        title: 'Fish Legs No. 1',
+        year: 2025,
+        prints4x6: 0,
+        prints5x7: 1,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2024zSpacegirl',
+        title: 'Z the Spacegirl',
+        year: 2024,
+        prints4x6: 0,
+        prints5x7: 1,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2024cortanaFlashNo1',
+        title: 'Cortana Flash No. 1',
+        partOfSeries: 'Cortana Flash',
+        year: 2024,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 1,
+        prints9x12: 0,
+    },
+    {fileName: '2024cortanaFlashNo2',
+        title: 'Cortana Flash No. 2',
+        partOfSeries: 'Cortana Flash',
+        year: 2024,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 3,
+        prints9x12: 0,
+    },
+    {fileName: '2024theElfWithTheDragonTattoo',
+        title: 'The Elf with the Dragon Tattoo',
+        year: 2024,
+        prints4x6: 0,
+        prints5x7: 1,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2023royalty',
+        title: 'Royalty',
+        year: 2023,
+        prints4x6: 0,
+        prints5x7: 1,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2021sallySupernova',
+        title: 'Sally Supernova',
+        year: 2021,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 1,
+        prints9x12: 0,
+    },
+    {fileName: '2023starTease',
+        title: 'Star Tease',
+        year: 2023,
+        prints4x6: 0,
+        prints5x7: 1,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2023tattooedPinupNo1',
+        title: 'Tattooed Pinup No. 1',
+        partOfSeries: 'Tattooed Pinups',
+        year: 2023,
+        prints4x6: 7,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2023tattooedPinupNo2',
+        title: 'Tattooed Pinup No. 2',
+        partOfSeries: 'Tattooed Pinups',
+        year: 2023,
+        prints4x6: 1,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2023tattooedPinupNo3',
+        title: 'Tattooed Pinup No. 3',
+        partOfSeries: 'Tattooed Pinups',
+        year: 2023,
+        prints4x6: 1,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2023tattooedPinupNo4',
+        title: 'Tattooed Pinup No. 4',
+        partOfSeries: 'Tattooed Pinups',
+        year: 2023,
+        prints4x6: 1,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2021daphne',
+        title: 'Daphne',
+        partOfSeries: 'Daphne and Velma',
+        year: 2021,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 3,
+        prints9x12: 0,
+    },
+    {fileName: '2021velma',
+        title: 'Velma',
+        partOfSeries: 'Daphne and Velma',
+        year: 2021,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 1,
+        prints9x12: 0,
+    },
+    {fileName: '2023beetleguiseFlash',
+        title: 'Horror Flash',
+        year: 2023,
+        prints4x6: 1,
+        prints5x7: 0,
+        prints8x10: 0,
+        prints9x12: 0,
+    },
+    {fileName: '2021throatpunch',
+        title: 'Throat Punch',
+        year: 2021,
+        prints4x6: 0,
+        prints5x7: 0,
+        prints8x10: 1,
+        prints9x12: 0,
+    },
+]
+function openShop() {
+    const priceItem = printObj => {
+        let priceStrss = []
+        if (printObj['prints4x6'] > 0) {
+            priceStrss.push(`4 x 6 inch print available for \$20`)
+        }
+        if (printObj['prints5x7'] > 0) {
+            priceStrss.push(`5 x 7 inch print available for \$30`)
+        }
+        if (printObj['prints8x10'] > 0) {
+            priceStrss.push(`8 x 10 inch print available for \$70`)
+        }
+        if (printObj['prints9x12'] > 0) {
+            priceStrss.push(`9 x 12 inch print available for \$100`)
+        }
+        return priceStrss.join(' <br> ')
+    }
+    const myShop = document.getElementById('shop-gallery')
+    myShop.innerHTML = ''
+    printsCatalogue.forEach(item => {
+        myShop.innerHTML += `<div class='shop-listing'>
+            <img src='scans/${item.fileName}.jpeg' alt='${item.title}'>
+            <p class='card-title'> ${item.title} </p>
+            <p class='available-prints'> ${priceItem(item)} </p>
+        </div>`
+    })
 }
 
 // Back to top button

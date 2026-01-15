@@ -154,7 +154,7 @@ a:hover {
 #art-at-a-glance {
   width: 100%;
 }
-.art-card-holder {
+.art-card-holder {/* --> These are used at home, at the blog and at about */
   margin: auto;
 }
 .art-card {
@@ -178,7 +178,7 @@ a:hover {
 .art-card img {
   width: 100%;
 }
-.copyrightP {
+.art-card p {
   color: darkgray;
   font-size: 11px;
 }
@@ -316,11 +316,6 @@ a:hover {
 #shop-content {
   padding-top: 100px;
 }
-#shop-content p {
-  margin-left: 20%;
-  margin-right: 20%;
-  text-align: left;
-}
 table {
   margin: 40px auto;
   text-align: left;
@@ -332,16 +327,38 @@ tr:nth-child(even) {
 td {
   padding: 7px 5px;
 }
+#shop-gallery {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.shop-listing {
+  padding: 5px;
+  width: 33%;
+  min-width: 300px;
+}
+.shop-listing img {
+  width: 100%;
+}
+.available-prints:hover {
+  color: #b17aa2;
+}
 
 /* Section 5: Blog */
 #blog-content {
   line-height: 1.5;
   margin: auto;
-  text-align: left;
   width: 75%;
 }
 #blog-content p {
   color: #445881;
+  text-align: left;
+}
+.blog-title {
+  text-align: left;
 }
 .blog-title a {
   font-size: 26px;
@@ -354,6 +371,10 @@ td {
 }
 .blog-post p {
   font-size: 20px;
+}
+.copyrightP {
+  color: darkgray;
+  font-size: 11px;
 }
 
 /* Section 6: About
