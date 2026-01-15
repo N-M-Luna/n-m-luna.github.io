@@ -193,6 +193,22 @@ a:hover {
 }
 
 /* Section 2: Catalogue */
+#catalogue-content .page-intro {
+  margin-top: 50px;
+}
+.collection-title {
+  display: inline;
+  font-size: 20px;
+  padding: 15px 10px;
+}
+.collection-title:hover {
+  background-color: #7b6992;
+  color: white;
+}
+.collection-title.active {
+  background-color: #7b6992;
+  color: white;
+}
 #catalog-list {
   width: 100%
 }
@@ -227,6 +243,11 @@ a:hover {
 }
 .card-title {
   font-size: 20px;
+}
+@media screen and (max-width: 650px) {
+  .collection-title {
+    display: block;
+  }
 }
 @media screen and (max-width: 900px) {
   .catalog-card {

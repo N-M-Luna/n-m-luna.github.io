@@ -29,7 +29,7 @@
     <div id='myTopnav' class='topnav'>
         <a id='home-link' href='#' class='active' onclick='goHome()'><i class='fa-solid fa-house-chimney'></i></a>
         <p id='current-tab'> </p>
-        <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link")'>Artist Calatolgue</a>
+        <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link"); openCollection("Space Babes");'>Artist Calatolgue</a>
         <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link"); openArchive();'>Archive</a>
         <a id='shop-link' href='#' class='nav-anchor' onclick='activate("shop-link"); openShop();'>Shop</a>
         <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link"); goBackToBlog();'>Blog</a>
@@ -139,81 +139,14 @@
     <!------------ Start Catalogue Content ------------>
     <section id='catalogue-content' class='hidden'>
         <div class='page-intro'>
-            <p>
-                Here is a collection of paintings for anyone and everyone who, like me, like to escape to science fiction and fantasy. <br>
-                The collection has: <em>Robots</em>, <em>Space babes</em>, and <em>Fantastical creatures</em>.
-            </p>
+            <div id='space-babes-btn' class='collection-title' onclick='openCollection("Space Babes")'>Space Babes Collection</div>
+            <div id='fantastique-btn' class='collection-title' onclick='openCollection("Fantastique")'>Fantastique Collection</div>
+            <div id='bold-ones-btn' class='collection-title' onclick='openCollection("Bold Ones")'>Bold Ones Collection</div>
+            <p id='collection-intro'> </p>
         </div>
 
-        <div id='catalogue-list'>
-            <!-- Robots -->
-             <div class='section-name'>Robots</div>
-            <div class='catalog-card'>
-                <img src='scans/2023theRobotTrainStationScene.jpeg' alt='The Robot Train Station Scene'>
-                <p class='gallery-tag'><span class='card-title'>The Robot Train Station Scene</span> <br><br> 2023. <br> Watercolor on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2023zenAndTheArtOfRobotMaintenance.jpeg' alt='Zen and the Art of Robot Maintenance'>
-                <p class='gallery-tag'><span class='card-title'>Zen and the Art of Robot Maintenance</span> <br><br> 2023. <br> Watercolor on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2023inkbot.jpeg' alt='Inkbot'>
-                <p class='gallery-tag'><span class='card-title'>Inkbot</span> <br><br> 2023. <br> Watercolor and ink on watercolor postcard. 4 x 6 inches. </p>
-            </div>
+        <div id='catalogue-list'> </div>
 
-            <!-- Space Babes -->
-             <div class='section-name'>Space Babes</div>
-            <div class='catalog-card'>
-            <img src='scans/2024zSpacegirl.jpeg' alt='Z the Spacegirl'>
-                <p class='gallery-tag'><span class='card-title'>Z the Spacegirl</span> <br><br> 2024. <br>  Watercolor and ink on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-            <img src='scans/2021sallySupernova.jpeg' alt='Sally Supernova'>
-                <p class='gallery-tag'><span class='card-title'>Sally Supernova</span> <br><br> 2021. <br> Watercolor on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-            <img src='scans/2024theElfWithTheDragonTattoo.jpeg' alt='The Elf with the Dragon Tattoo'>
-                <p class='gallery-tag'><span class='card-title'>The Elf with the Dragon Tattoo</span> <br><br> 2024. <br> Watercolor and ink on mixed media paper with vellum surface. 6 x 8 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Blue).jpeg' alt='Space Babe (Blue)'>
-                    <p class='gallery-tag'><span class='card-title'>Space Babe (Blue)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Green).jpeg' alt='Space Babe (Green)'>
-                    <p class='gallery-tag'><span class='card-title'>Space Babe (Green)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(Purple).jpeg' alt='Space Babe (Purple)'>
-                    <p class='gallery-tag'><span class='card-title'>Space Babe (Purple)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                    <img src='scans/2022spaceBabe(White).jpeg' alt='Space Babe (White)'>
-                    <p class='gallery-tag'><span class='card-title'>Space Babe (White)</span> <br><br> 2022. <br> Watercolor and ink on page from <i>Mathematical Reviews</i>, vol. 36, no. 4, October 1968. 9 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2021daphne.jpeg' alt='Daphne'>
-                <p class='gallery-tag'><span class='card-title'>Daphne</span> <br><br> 2021. <br> Watercolor and ink on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2021velma.jpeg' alt='Velma'>
-                <p class='gallery-tag'><span class='card-title'>Velma</span> <br><br> 2021. <br> Watercolor and ink on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <!-- Fantastical -->
-             <div class='section-name'>Fantastical Creatures</div>
-            <div class='catalog-card'>
-                <img src='scans/2023rolinsVampire.jpeg' alt="Rollin's Vampire">
-                <p class='gallery-tag'><span class='card-title'>Rollin's Vampire</span> <br><br> 2023. <br> Watercolor on watercolor postcard. 4 x 6 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2023theForestScene.jpeg' alt='The Forest Scene'>
-                <p class='gallery-tag'><span class='card-title'>The Forest Scene</span> <br><br> 2023. <br> Watercolor on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-            <div class='catalog-card'>
-                <img src='scans/2023theDancingOnionheadsScene.jpeg' alt='The Dancing Onionhead's Scene'>
-                <p class='gallery-tag-landscape'><span class='card-title'>The Dancing Onionhead's Scene</span> <br><br> 2023. <br> Ink on 100% cotton paper with Vellum finish. 8.5 x 12 inches. </p>
-            </div>
-        </div>
     </section><!--End Catalogue Content-->
 
     <!------------ Start Archive Content ------------>
@@ -471,7 +404,7 @@
             </div>
             <div class='go-here'>
                 <p>Look at art.</p>
-                <a href='#' class='nav-at-foot' onclick='activate("catalogue-link", true)'>Artist Calatolgue</a>
+                <a href='#' class='nav-at-foot' onclick='activate("catalogue-link", true); openCollection("Space Babes");'>Artist Calatolgue</a>
                 <a href='#' class='nav-at-foot' onclick='activate("archive-link", true)'>Archive</a>
             </div>
             <div class='go-here'>

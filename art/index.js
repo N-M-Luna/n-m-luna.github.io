@@ -1361,8 +1361,6 @@ const scansCatalogue = [
         fileName: '2023zenAndTheArtOfRobotMaintenance'
     },
 ]
-
-//Opening/filtering in the archive
 const mediaTags = []
 const tagTags = []
 scansCatalogue.forEach(scanObj => {
@@ -1461,98 +1459,89 @@ function activateBtn(indx) {
     filterBtns[indx].classList.add('filtered')
 }
 
-//Top navigational bar
-function toggleMobileMenu() {
-
-  //Show or hide mobile menu
-  let navBar = document.getElementById('myTopnav');
-  if (navBar.className === "topnav") {
-    navBar.className += " responsive";
-  } else {
-    navBar.className = "topnav";
-  }
-
-  //Change menu icon from bars to x, or vice versa
-  const menuControl = document.getElementById('menu-icon').firstElementChild
-  if (menuControl.classList[1] === 'fa-x') {
-    menuControl.classList.remove('fa-x')
-    menuControl.classList.add('fa-bars')
-  } else {
-    menuControl.classList.remove('fa-bars')
-    menuControl.classList.add('fa-x')
-  }
-}
-
-//Change sections
-function goHome(fromFooter = false) {
-
-  //Activate home
-  const homeLink = document.getElementById('home-link')
-  homeLink.classList.add('active')
-
-  //De-activate other sections
-  const sections = document.getElementsByClassName('nav-anchor')
-  for(let i = 0; i < sections.length; i++) {
-    sections[i].classList.remove('active')
-  }
-
-  //Show home
-  const content = document.getElementsByTagName('section')
-  for(let i = 0; i < content.length; i++) {
-    if (content[i].id === 'home-content') {
-      content[i].classList.remove('hidden')
-    } else {
-      content[i].classList.add('hidden')
+//Artist Catalogue
+const collectionsCatalogue = {
+    'Space Babes': {
+        intro: 'Mid-century science fiction meets pinups',
+        files: [ //11 watercolors + ink outline
+            '2022spaceBabe(Green)',
+            '2022spaceBabe(White)',
+            '2022spaceBabe(Blue)',
+            '2022spaceBabe(Purple)',
+            '2023starTease',
+            '2021sallySupernova',
+            '2024zSpacegirl',
+            '2021daphne',
+            '2021velma',
+            '2025hotToasterNo1',
+            '2025hotToasterNo2',
+        ]
+    },
+    'Fantastique': {
+        intro: 'A place for the whimsical, fantastic, or otherwise odd',
+        files: [//4 watercolors, 1 ink, 3 watercolors + ink outline
+            '2023theForestScene',
+            '2023zenAndTheArtOfRobotMaintenance',
+            '2023theRobotTrainStationScene',
+            '2023royalty',
+            '2023theDancingOnionheadsScene',
+            '2024theFates',
+            '2023inkbot',
+            '2024merfolk',
+        ]
+    },
+    'Bold Ones': {
+        intro: 'Bold outlines, soft colors',
+        files: [//13 watercolors + ink outlines, 1 ink
+            '2024theElfWithTheDragonTattoo',
+            '2021throatpunch',
+            '2025fishLegsNo1',
+            '2023tattooedPinupNo1',
+            '2023tattooedPinupNo2',
+            '2023tattooedPinupNo3',
+            '2023tattooedPinupNo4',
+            '2024ruin',
+            '2025ingredientes',
+            '2024cortanaFlashNo1',
+            '2024cortanaFlashNo2',
+            '2023coolCatsSaySorryMom',
+            '2023beetleguiseFlash',
+            '2022gypsyFlash'
+        ]
     }
-  }
-
-  //Update tab name
-  const currentTb = document.getElementById('current-tab')
-  currentTb.innerHTML = ''
-
-  //Close mobile menu if it's open
-  const menuControl = document.getElementById('menu-icon').firstElementChild
-  if (menuControl.classList[1] === 'fa-x' && !fromFooter) {
-    toggleMobileMenu()
-  }
 }
-function activate(sectionID, fromFooter = false) {
+function openCollection(collectionName) {
 
-  //De-activate everything
-  const homeLink = document.getElementById('home-link')
-  homeLink.classList.remove('active')
-  const sections = document.getElementsByClassName('nav-anchor')
-  for(let i = 0; i < sections.length; i++) {
-    sections[i].classList.remove('active')
-  }
-
-  //Activate the clicked-on section link
-  const activeSection = document.getElementById(sectionID)
-  activeSection.classList.add('active')
-
-  //Show correct content
-  const content = document.getElementsByTagName('section')
-  for(let i = 0; i < content.length; i++) {
-    if (content[i].id.slice(0, -8) + '-link' === sectionID) {
-      content[i].classList.remove('hidden')
-    } else {
-      content[i].classList.add('hidden')
+    //Add .active class to div with ID: 'collection-name-btn'
+    const collectionBtns = document.getElementsByClassName('collection-title')
+    for(let i = 0; i < collectionBtns.length; i++) {
+        collectionBtns[i].classList.remove('active')
     }
-  }
+    const activeCollectionName = collectionName.toLowerCase().replaceAll(' ', '-') + '-btn'
+    const activeCollectionButton = document.getElementById(activeCollectionName)
+    activeCollectionButton.classList.add('active')
 
-  //Update current tab
-  const currentTb = document.getElementById('current-tab')
-  const tabName = sectionID.slice(0,1).toUpperCase() + sectionID.slice(1, -5).replace('-', ' ')
-  currentTb.innerHTML = ` / ${tabName} `
+    //Fill in the p with class collection-intro with the intro of activeCollection
+    const activeCollection = collectionsCatalogue[collectionName]
+    const collectionIntroSpace = document.getElementById('collection-intro')
+    collectionIntroSpace.innerHTML = activeCollection.intro
 
-  //Close mobine menu
-  if(!fromFooter) {
-  toggleMobileMenu()
-  }
+    //Fill in the div with ID catalogue-list with the files of activeCollection
+    const fileNames = activeCollection.files
+    const collectionScans = scansCatalogue.filter(scanItem => fileNames.includes(scanItem.fileName)) //TODO display them in a specific order
+    const collectionList = document.getElementById('catalogue-list')
+    let collectionContent = '' // fileNames.join(', ')
+    collectionScans.forEach(scanObj => {
+        collectionContent += `<div class='catalog-card'>
+                <img src='scans/${scanObj.fileName}.jpeg' alt='${scanObj.title}'>
+                <p class='gallery-tag'><span class='card-title'>${scanObj.title}</span> <br><br> ${scanObj.year}. <br> ${writeMediaList(scanObj.medium)} on <br> ${scanObj.paintedOn}. ${scanObj.height > 0 ? `<br> ${scanObj.height} x ${scanObj.width} inches.` : ''} </p>
+            </div>`
+    })
+    collectionList.innerHTML = collectionContent
 }
 
-//Open a blog post
-function openBlogPost(postID) {
+//Blog
+function openBlogPost(postID) {//Open a blog post
   //Hide blog index
   const titleDivs = document.getElementsByClassName('blog-title')
   for(let i = 0; i < titleDivs.length; i++) {
@@ -1569,8 +1558,7 @@ function openBlogPost(postID) {
   const backToIndexBtn = document.getElementById('back-to-index-btn')
   backToIndexBtn.classList.remove('hidden')
 }
-//Open all blog posts
-function goBackToBlog() {
+function goBackToBlog() {//Open all blog posts
   //Show blog index and hide full blog posts
   const postDIVs = document.getElementsByClassName('blog-post')
   const titleDivs = document.getElementsByClassName('blog-title')
@@ -1586,7 +1574,7 @@ function goBackToBlog() {
   backToIndexBtn.classList.add('hidden')
 }
 
-//Open shop
+//Shop
 const printsCatalogue = [
     {fileName: '2022spaceBabe(Blue)',
         title: 'Space Babe (Blue)',
@@ -1785,6 +1773,94 @@ function openShop() {
             <p class='available-prints'> ${priceItem(item)} </p>
         </div>`
     })
+}
+
+//Top navigational bar
+function toggleMobileMenu() {
+
+  //Show or hide mobile menu
+  let navBar = document.getElementById('myTopnav');
+  if (navBar.className === "topnav") {
+    navBar.className += " responsive";
+  } else {
+    navBar.className = "topnav";
+  }
+
+  //Change menu icon from bars to x, or vice versa
+  const menuControl = document.getElementById('menu-icon').firstElementChild
+  if (menuControl.classList[1] === 'fa-x') {
+    menuControl.classList.remove('fa-x')
+    menuControl.classList.add('fa-bars')
+  } else {
+    menuControl.classList.remove('fa-bars')
+    menuControl.classList.add('fa-x')
+  }
+}
+function goHome(fromFooter = false) {
+
+  //Activate home
+  const homeLink = document.getElementById('home-link')
+  homeLink.classList.add('active')
+
+  //De-activate other sections
+  const sections = document.getElementsByClassName('nav-anchor')
+  for(let i = 0; i < sections.length; i++) {
+    sections[i].classList.remove('active')
+  }
+
+  //Show home
+  const content = document.getElementsByTagName('section')
+  for(let i = 0; i < content.length; i++) {
+    if (content[i].id === 'home-content') {
+      content[i].classList.remove('hidden')
+    } else {
+      content[i].classList.add('hidden')
+    }
+  }
+
+  //Update tab name
+  const currentTb = document.getElementById('current-tab')
+  currentTb.innerHTML = ''
+
+  //Close mobile menu if it's open
+  const menuControl = document.getElementById('menu-icon').firstElementChild
+  if (menuControl.classList[1] === 'fa-x' && !fromFooter) {
+    toggleMobileMenu()
+  }
+}
+function activate(sectionID, fromFooter = false) {
+
+  //De-activate everything
+  const homeLink = document.getElementById('home-link')
+  homeLink.classList.remove('active')
+  const sections = document.getElementsByClassName('nav-anchor')
+  for(let i = 0; i < sections.length; i++) {
+    sections[i].classList.remove('active')
+  }
+
+  //Activate the clicked-on section link
+  const activeSection = document.getElementById(sectionID)
+  activeSection.classList.add('active')
+
+  //Show correct content
+  const content = document.getElementsByTagName('section')
+  for(let i = 0; i < content.length; i++) {
+    if (content[i].id.slice(0, -8) + '-link' === sectionID) {
+      content[i].classList.remove('hidden')
+    } else {
+      content[i].classList.add('hidden')
+    }
+  }
+
+  //Update current tab
+  const currentTb = document.getElementById('current-tab')
+  const tabName = sectionID.slice(0,1).toUpperCase() + sectionID.slice(1, -5).replace('-', ' ')
+  currentTb.innerHTML = ` / ${tabName} `
+
+  //Close mobine menu
+  if(!fromFooter) {
+  toggleMobileMenu()
+  }
 }
 
 // Back to top button
