@@ -1257,7 +1257,7 @@ const scansCatalogue = [
         paintedOn: 'Calligraphy writing paper',
         height: 0,
         width: 0,
-        tags: ['hand-letteting'],
+        tags: ['hand-lettering'],
         fileName: '2019elTinteroTitilante'
     },
     {title: 'Tools of Witchcraft and Sorcery',
@@ -1748,31 +1748,29 @@ const printsCatalogue = [
     },
 ]
 function openShop() {
-    const priceItem = printObj => {
-        let priceStrss = []
-        if (printObj['prints4x6'] > 0) {
+    const myShop = document.getElementById('shop-gallery')
+    let strigyfiedShop = ''
+    printsCatalogue.forEach(item => {
+        const priceStrss = []
+        if (item['prints4x6'] > 0) {
             priceStrss.push(`4 x 6 inch print available for \$20`)
         }
-        if (printObj['prints5x7'] > 0) {
+        if (item['prints5x7'] > 0) {
             priceStrss.push(`5 x 7 inch print available for \$30`)
         }
-        if (printObj['prints8x10'] > 0) {
+        if (item['prints8x10'] > 0) {
             priceStrss.push(`8 x 10 inch print available for \$70`)
         }
-        if (printObj['prints9x12'] > 0) {
+        if (item['prints9x12'] > 0) {
             priceStrss.push(`9 x 12 inch print available for \$100`)
         }
-        return priceStrss.join(' <br> ')
-    }
-    const myShop = document.getElementById('shop-gallery')
-    myShop.innerHTML = ''
-    printsCatalogue.forEach(item => {
-        myShop.innerHTML += `<div class='shop-listing'>
+        strigyfiedShop += `<div class='shop-listing'>
             <img src='scans/${item.fileName}.jpeg' alt='${item.title}'>
             <p class='card-title'> ${item.title} </p>
-            <p class='available-prints'> ${priceItem(item)} </p>
+            <p class='available-prints'> ${priceStrss.join(' <br> ')} </p>
         </div>`
     })
+    myShop.innerHTML = strigyfiedShop
 }
 
 //Top navigational bar

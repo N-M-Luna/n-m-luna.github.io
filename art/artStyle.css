@@ -274,6 +274,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 30px;
   padding-left: 5%;
   padding-right: 5%;
 }
