@@ -1425,10 +1425,10 @@ function openArchive(tagToShow = '', tagType = '') {
     const dimensionsInIn = height === 0 ? '' : `${height} x ${width} inches`
 
     //Build and push the art div
-    const loadingOpts = i > 10 ? `loading='lazy' ` : ''
+    const classes = i < 11 ? 'archived-art' : 'archived-art hidden'
     const archivedArtDiv = `
-    <div class='archived-art'>
-      <img ${loadingOpts} src='scans/${fileName}.jpeg' alt='${title}'>
+    <div class='${classes}'>
+      <img src='scans/${fileName}.jpeg' alt='${title}'>
       <p class='copyrightP'>
         <span class='myTitle'> ${title} </span> © ${year} <br>
         ${mediaList} on <br>
@@ -1437,7 +1437,30 @@ function openArchive(tagToShow = '', tagType = '') {
       </p>
     </div>`
     myGallery.innerHTML += archivedArtDiv
+
   })
+  //Add button
+    const loadingBtn = document.getElementById('loading-btn')
+  if (organizedScans.length < 11) {
+    loadingBtn.classList.add('hidden')
+  } else {
+    loadingBtn.classList.remove('hidden')
+  }
+}
+function loadMoreArt(startIndx) {
+    //Reveal the divs with class 'archived-art' and index startIndx to startIndx+10
+    const artDivs = document.getElementsByClassName('archived-art')
+    const endIndx = startIndx + 10
+    for (let i = startIndx; i < endIndx; i++) {
+        artDivs[i].classList.remove('hidden')
+    }
+    //Update button
+    const loadingBtn = document.getElementById('loading-btn')
+    if (endIndx < artDivs.length) {
+        loadingBtn.setAttribute('onClick', `loadMoreArt(${endIndx})`)
+    } else {
+        loadingBtn.classList.add('hidden')
+    }
 }
 function openArchiveFilter() {
     const openFilterBtn = document.getElementById('open-filter-btn')
@@ -1584,6 +1607,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 1,
+        etsyURL: '#'
     },
     {fileName: '2022spaceBabe(Green)',
         title: 'Space Babe (Green)',
@@ -1593,6 +1617,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 1,
+        etsyURL: '#'
     },
     {fileName: '2022spaceBabe(Purple)',
         title: 'Space Babe (Purple)',
@@ -1601,6 +1626,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 1,
+        etsyURL: '#'
     },
     {fileName: '2022spaceBabe(White)',
         title: 'Space Babe (White)',
@@ -1609,6 +1635,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 1,
+        etsyURL: '#'
     },
     {fileName: '2025fishLegsNo1',
         title: 'Fish Legs No. 1',
@@ -1617,6 +1644,7 @@ const printsCatalogue = [
         prints5x7: 1,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2024zSpacegirl',
         title: 'Z the Spacegirl',
@@ -1625,6 +1653,7 @@ const printsCatalogue = [
         prints5x7: 1,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2024cortanaFlashNo1',
         title: 'Cortana Flash No. 1',
@@ -1634,6 +1663,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 1,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2024cortanaFlashNo2',
         title: 'Cortana Flash No. 2',
@@ -1643,6 +1673,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 3,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2024theElfWithTheDragonTattoo',
         title: 'The Elf with the Dragon Tattoo',
@@ -1651,6 +1682,7 @@ const printsCatalogue = [
         prints5x7: 1,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023royalty',
         title: 'Royalty',
@@ -1659,6 +1691,7 @@ const printsCatalogue = [
         prints5x7: 1,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2021sallySupernova',
         title: 'Sally Supernova',
@@ -1667,6 +1700,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 1,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023starTease',
         title: 'Star Tease',
@@ -1675,6 +1709,7 @@ const printsCatalogue = [
         prints5x7: 1,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023tattooedPinupNo1',
         title: 'Tattooed Pinup No. 1',
@@ -1684,6 +1719,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023tattooedPinupNo2',
         title: 'Tattooed Pinup No. 2',
@@ -1693,6 +1729,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023tattooedPinupNo3',
         title: 'Tattooed Pinup No. 3',
@@ -1702,6 +1739,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023tattooedPinupNo4',
         title: 'Tattooed Pinup No. 4',
@@ -1711,6 +1749,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2021daphne',
         title: 'Daphne',
@@ -1720,6 +1759,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 3,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2021velma',
         title: 'Velma',
@@ -1729,6 +1769,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 1,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2023beetleguiseFlash',
         title: 'Horror Flash',
@@ -1737,6 +1778,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 0,
         prints9x12: 0,
+        etsyURL: '#'
     },
     {fileName: '2021throatpunch',
         title: 'Throat Punch',
@@ -1745,6 +1787,7 @@ const printsCatalogue = [
         prints5x7: 0,
         prints8x10: 1,
         prints9x12: 0,
+        etsyURL: '#'
     },
 ]
 function openShop() {
@@ -1753,21 +1796,21 @@ function openShop() {
     printsCatalogue.forEach(item => {
         const priceStrss = []
         if (item['prints4x6'] > 0) {
-            priceStrss.push(`4 x 6 inch print available for \$20`)
+            priceStrss.push(`<a href='${item.etsyURL}'>4 x 6 inch print available for \$20</a>`)
         }
         if (item['prints5x7'] > 0) {
-            priceStrss.push(`5 x 7 inch print available for \$30`)
+            priceStrss.push(`<a href='${item.etsyURL}'>5 x 7 inch print available for \$30</a>`)
         }
         if (item['prints8x10'] > 0) {
-            priceStrss.push(`8 x 10 inch print available for \$70`)
+            priceStrss.push(`<a href='${item.etsyURL}'>8 x 10 inch print available for \$70</a>`)
         }
         if (item['prints9x12'] > 0) {
-            priceStrss.push(`9 x 12 inch print available for \$100`)
+            priceStrss.push(`<a href='${item.etsyURL}'>9 x 12 inch print available for \$100</a>`)
         }
         strigyfiedShop += `<div class='shop-listing'>
             <img src='scans/${item.fileName}.jpeg' alt='${item.title}'>
             <p class='card-title'> ${item.title} </p>
-            <p class='available-prints'> ${priceStrss.join(' <br> ')} </p>
+            <p> ${priceStrss.join(' <br> ')} </p>
         </div>`
     })
     myShop.innerHTML = strigyfiedShop

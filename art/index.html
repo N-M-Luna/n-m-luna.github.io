@@ -168,7 +168,9 @@
         <div id='gallery'>
         </div>
 
-        <p>All works are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC-BY-NC-SA 4.0</a></p>
+        <button id='loading-btn' onClick='loadMoreArt(11)'>Show 10 more</button>
+
+        <p>All works are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>CC-BY-NC-SA 4.0</a>.</p>
 
     </section><!--End Archive Content-->
 
@@ -368,7 +370,8 @@
 
      <!------------ Start Shop Content ------------>
     <section id='shop-content' class='hidden'>
-            <!-- <p>The price for prints are based on size:</p>
+            <!-- Shop version 1
+            <p>The price for prints are based on size:</p>
             <table>
                 <tr>
                     <td>4x6 inches</td>
@@ -386,12 +389,18 @@
                     <td>9x12 inches</td>
                     <td>$100.⁰⁰</td>
                 </tr>
-            </table> -->
+            </table>
             <p><strong>Interested in a print or an original?</strong> Don't hesitate to reach out! </p>
             <p><span class='eDirection'>art.of.n.m.luna@gmail.com</span></p>
+            -->
+
+            <p>Here are a list of prints available for purchase via <a href='#'>my Etsy shop</a>.</p>
 
             <div id='shop-gallery'>
             </div>
+
+            <p><strong>Interested in a print that is not here?</strong> Don't hesitate to reach out! </p>
+            <p><span class='eDirection'>art.of.n.m.luna@gmail.com</span></p>
 
     </section><!--End Shop Content-->
 
@@ -409,7 +418,7 @@
             <div class='go-here'>
                 <p>Look at art.</p>
                 <a href='#' class='nav-at-foot' onclick='activate("catalogue-link", true); openCollection("Space Babes");'>Artist Calatolgue</a>
-                <a href='#' class='nav-at-foot' onclick='activate("archive-link", true)'>Archive</a>
+                <a href='#' class='nav-at-foot' onclick='activate("archive-link", true); openArchive()'>Archive</a>
             </div>
             <div class='go-here'>
                 <p>Learn more.</p>

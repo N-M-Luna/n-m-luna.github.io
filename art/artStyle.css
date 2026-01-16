@@ -31,6 +31,9 @@ a {
 a:hover {
   color: #0d4771;
 }
+img {
+  pointer-events: none;
+}
 #back-to-top-btn {
   background-color: transparent;
   border-width: 0px;
@@ -74,6 +77,9 @@ a:hover {
 }
 .struckout-text {
   text-decoration: line-through;
+}
+.hidden {
+  display: none;
 }
 
 /* Top bar */
@@ -143,11 +149,6 @@ a:hover {
   .topnav.responsive #catalogue-link {
     margin-top: 48px;
   }
-}
-
-/* Content/Sections */
-.hidden {
-  display: none;
 }
 
 /* Section 1: Home */
@@ -294,7 +295,7 @@ a:hover {
   margin: 0px auto 50px auto;
   width: 80%;
 }
-#filter-bar button:hover, #open-filter-btn:hover {
+#filter-bar button:hover, #open-filter-btn:hover, #loading-btn:hover {
   background-color: #0d4771;
   color: white;
 }
@@ -306,6 +307,19 @@ a:hover {
   font-size: 14px;
   margin: 7px 5px;
   padding: 10px 7px;
+}
+#loading-btn {
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  color: #0d4771;
+  display: block;
+  font-size: 14px;
+  margin: 30px auto;
+  padding: 10px 7px;
+}
+#loading-btn.hidden {
+  display: none;
 }
 #open-filter-btn {
   margin-bottom: -150px;
@@ -358,15 +372,13 @@ td {
   padding-right: 5%;
 }
 .shop-listing {
+  margin: 30px 25px;
   padding: 5px;
   width: 33%;
   min-width: 300px;
 }
 .shop-listing img {
   width: 100%;
-}
-.available-prints:hover {
-  color: #b17aa2;
 }
 
 /* Section 5: Blog */
