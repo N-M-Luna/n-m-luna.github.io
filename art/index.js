@@ -1092,7 +1092,7 @@ const scansCatalogue = [
     },
     {title: 'Stained Flower',
         partOfSeries: '',
-        year: 2003,
+        year: 2020,
         medium: ['watercolor', 'ink'],
         paintedOn: 'Watercolor postcard',
         height: 6,
