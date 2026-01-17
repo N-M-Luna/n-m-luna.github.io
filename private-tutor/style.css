@@ -1,16 +1,16 @@
 body {
     background-color: #23596d;
     color: white;
-    padding-top: 30px;
+    padding-top: 50px;
     text-align: center;
 }
 a {
     color: white;
 }
-a:hover, .a-like-span:hover {
+a:hover, .underlined:hover {
     color: #ed8772;
 }
-.a-like-span.underlined {
+.underlined {
     text-decoration: underline;
 }
 h1 {
@@ -20,4 +20,17 @@ p {
     font-size: 18px;
     line-height: 2;
     margin-top: 50px;
+}
+.eDirection {
+    font-family: monospace;
+    font-size: 16px;
+}
+.eDirection:hover, .used {
+    color: #ed8772;
+}
+.hidden {
+    display: none;
+}
+footer {
+    padding-top: 60px;
 }

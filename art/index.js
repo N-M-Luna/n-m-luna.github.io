@@ -1796,16 +1796,16 @@ function openShop() {
     printsCatalogue.forEach(item => {
         const priceStrss = []
         if (item['prints4x6'] > 0) {
-            priceStrss.push(`<a href='${item.etsyURL}'>4 x 6 inch print available for \$20</a>`)
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}'>4 x 6 inch print available for \$20</a>`)
         }
         if (item['prints5x7'] > 0) {
-            priceStrss.push(`<a href='${item.etsyURL}'>5 x 7 inch print available for \$30</a>`)
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}'>5 x 7 inch print available for \$30</a>`)
         }
         if (item['prints8x10'] > 0) {
-            priceStrss.push(`<a href='${item.etsyURL}'>8 x 10 inch print available for \$70</a>`)
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}'>8 x 10 inch print available for \$70</a>`)
         }
         if (item['prints9x12'] > 0) {
-            priceStrss.push(`<a href='${item.etsyURL}'>9 x 12 inch print available for \$100</a>`)
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}'>9 x 12 inch print available for \$100</a>`)
         }
         strigyfiedShop += `<div class='shop-listing'>
             <img src='scans/${item.fileName}.jpeg' alt='${item.title}'>
