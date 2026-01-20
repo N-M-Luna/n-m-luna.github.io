@@ -55,7 +55,7 @@ img {
 .page-intro p {
   font-size: 20px;
   line-height: 1.5;
-  margin: 200px auto 200px auto;
+  margin: 150px auto 150px auto;
   max-width: 520px;
   width: 80%;
 }
@@ -349,9 +349,7 @@ img {
 }
 
 /* Section 4: Shop */
-#shop-content {
-  padding-top: 100px;
-}
+/* #shop-content {} */
 table {
   margin: 40px auto;
   text-align: left;
@@ -379,6 +377,11 @@ td {
 }
 .shop-listing img {
   width: 100%;
+}
+.shop-btn {
+  margin-top: 14px;
+  padding: 14px 16px;
+  font-size: 17px;
 }
 
 /* Section 5: Blog */
