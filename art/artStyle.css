@@ -198,6 +198,7 @@ img {
   margin-top: 50px;
 }
 .collection-title {
+  border-radius: 15px;
   display: inline;
   font-size: 20px;
   padding: 15px 10px;
@@ -349,7 +350,6 @@ img {
 }
 
 /* Section 4: Shop */
-/* #shop-content {} */
 table {
   margin: 40px auto;
   text-align: left;
@@ -379,9 +379,16 @@ td {
   width: 100%;
 }
 .shop-btn {
+  background-color: #7b6992;
+  border-radius: 15px;
+  color: white;
   margin-top: 14px;
   padding: 14px 16px;
   font-size: 17px;
+}
+ .shop-btn:hover {
+  background-color: #0d4771;
+  color: white;
 }
 
 /* Section 5: Blog */
