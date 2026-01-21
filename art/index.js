@@ -88,9 +88,9 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['flash', 'traditional American tattoo', 'hand-lettering', 'outline'],
-        fileName: '2021amorcitoOutlines'
+        fileName: '2021amorcitoOutline'
     },
-    {title: 'Amorcito Flash Sheet',
+    {title: 'Amorcito Flash',
         partOfSeries: '',
         year: 2021,
         medium: ['watercolor', 'ink'],
@@ -98,7 +98,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: ['flash', 'traditional American tattoo', 'hand-lettering'],
-        fileName: '2021amorcitoFlashSheet'
+        fileName: '2021amorcitoFlash'
     },
     {title: 'Arachnids',
         partOfSeries: '',
@@ -210,7 +210,7 @@ const scansCatalogue = [
         tags: [],
         fileName: '2025coffeeBound'
     },
-    {title: 'Coffee Flash Outline',
+    {title: 'Coffee Fiend Flash Outline',
         partOfSeries: '',
         year: 2021,
         medium: ['ink'],
@@ -218,9 +218,9 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['flash', 'traditional American tattoo', 'hand-lettering', 'outline'],
-        fileName: '2021coffeeFlashOutline'
+        fileName: '2021coffeeFiendOutline'
     },
-    {title: 'Coffee Flash Sheet',
+    {title: 'Coffee Fiend Flash',
         partOfSeries: '',
         year: 2021,
         medium: ['watercolor', 'ink'],
@@ -228,7 +228,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: ['flash', 'traditional American tattoo', 'hand-lettering'],
-        fileName: '2021coffeeFlashSheet'
+        fileName: '2021coffeeFiendFlash'
     },
     {title: 'Cold Partner',
         partOfSeries: '',
@@ -310,7 +310,7 @@ const scansCatalogue = [
         tags: ['dancer', 'hand-lettering'],
         fileName: '2020dance'
     },
-    {title: 'Dancer in the rain', //TODO
+    {title: 'Dancer in the rain',
         partOfSeries: '',
         year: 2015,
         medium: ['acrylic'],
@@ -670,7 +670,7 @@ const scansCatalogue = [
         tags: ['hand-lettering'],
         fileName: '2020knitFastDieWarm'
     },
-    {title: 'Knuckle Outlines',
+    {title: 'Knuckle Outline',
         partOfSeries: '',
         year: 2021,
         medium: ['ink'],
@@ -678,7 +678,7 @@ const scansCatalogue = [
         height: 11,
         width: 8.5,
         tags: ['hand-lettering', 'flash', 'traditional American tattoo', 'outline'],
-        fileName: '2021knuckleOutlines'
+        fileName: '2021knuckleOutline'
     },
     {title: 'Lady Luck',
         partOfSeries: '',

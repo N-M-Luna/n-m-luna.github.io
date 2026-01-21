@@ -381,6 +381,7 @@ td {
 .shop-btn {
   background-color: #7b6992;
   border-radius: 15px;
+  border-width: 0px;
   color: white;
   margin-top: 14px;
   padding: 14px 16px;

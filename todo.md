@@ -1,0 +1,3 @@
+-Update scans catalogue with new scans
+-Make listings on Etsy
+-Update shop in my page
