@@ -37,11 +37,11 @@ img {
 #back-to-top-btn {
   background-color: transparent;
   border-width: 0px;
-  border-radius: 10%;
+  border-radius: 10px;
   bottom: 5%;
   color: #7b6992;
   font-size: 18px;
-  padding: 5px 0px;
+  padding: 5px 10px;
   position: fixed;
   right: 2%;
 }

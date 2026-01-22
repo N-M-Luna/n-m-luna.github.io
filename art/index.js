@@ -220,6 +220,66 @@ const scansCatalogue = [
         tags: ['pin up', 'dancer'],
         fileName: '2018canCanDancer'
     },
+    {title: 'Cat Card No. 1',
+        partOfSeries: 'Cat Cards',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['cat', 'greeting card', 'hand-lettering'],
+        fileName: 'carCardNo1'
+    },
+    {title: 'Cat Card No. 2',
+        partOfSeries: 'Cat Cards',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['cat', 'greeting card', 'hand-lettering'],
+        fileName: 'carCardNo2'
+    },
+    {title: 'Cat Card No. 3',
+        partOfSeries: 'Cat Cards',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['cat', 'greeting card', 'hand-lettering'],
+        fileName: 'carCardNo3'
+    },
+    {title: 'Cat Card No. 4',
+        partOfSeries: 'Cat Cards',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['cat', 'greeting card', 'hand-lettering'],
+        fileName: 'carCardNo4'
+    },
+    {title: 'Cat Card No. 5',
+        partOfSeries: 'Cat Cards',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['cat', 'greeting card', 'hand-lettering'],
+        fileName: 'carCardNo5'
+    },
+    {title: 'Chaotic Neutral',
+        partOfSeries: '',
+        year: 2018,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['greeting card', 'hand-lettering'],
+        fileName: 'chaoticNeutralCard'
+    },
     {title: 'Coffee Bound',
         partOfSeries: '',
         year: 2025,
@@ -634,10 +694,10 @@ const scansCatalogue = [
         partOfSeries: '',
         year: 2024,
         medium: ['ink'],
-        paintedOn: 'Page',
+        paintedOn: 'Paper',
         height: 0,
         width: 0,
-        tags: ['comic', 'slice of life'],
+        tags: ['comic', 'slice of life', 'sketch'],
         fileName: '2024theHouseholdInFall'
     },
     {title: 'Inkbot',
@@ -969,6 +1029,36 @@ const scansCatalogue = [
         width: 0,
         tags: ['hand-lettering'],
         fileName: '2021piropos'
+    },
+    {title: 'Piropo Card No. 1',
+        partOfSeries: 'Pirpopo Cards',
+        year: 2020,
+        medium: ['watercolor', 'ink'],
+        paintedOn: 'Postcard',
+        height: 6,
+        width: 4,
+        tags: ['hand-lettering', 'greeting card'],
+        fileName: 'piropoCardNo1'
+    },
+    {title: 'Piropo Card No. 2',
+        partOfSeries: 'Pirpopo Cards',
+        year: 2020,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 4,
+        width: 6,
+        tags: ['hand-lettering', 'greeting card'],
+        fileName: 'piropoCardNo2'
+    },
+    {title: 'Piropo Card No. 3',
+        partOfSeries: 'Pirpopo Cards',
+        year: 2020,
+        medium: ['ink'],
+        paintedOn: 'Postcard',
+        height: 4,
+        width: 6,
+        tags: ['hand-lettering', 'greeting card'],
+        fileName: 'piropoCardNo3'
     },
     {title: 'Photo Exercise',
         partOfSeries: '',
@@ -1507,7 +1597,7 @@ const scansCatalogue = [
         paintedOn: 'Canvas on wooden frame',
         height: 3,
         width: 2,
-        tags: ['popular culture', 'surreal'],
+        tags: ['pop culture', 'surreal'],
         fileName: '2016warpEngineEmissions'
     },
     {title: 'Wild Child',
@@ -1645,42 +1735,43 @@ function openArchive(tagToShow = '', tagType = '') {
         organizedScans.push(...scansToDisplay)
     }
 
-  //Write to the 'gallery' div
-  const myGallery = document.getElementById('gallery')
-  myGallery.innerHTML = ''
-  organizedScans.forEach((scannedImg, i) => {
-    //Get data of painting
-    const {title, partOfSeries, year, medium, paintedOn, height, width, fileName} = scannedImg
-    const mediaList = writeMediaList(medium)
-    const dimensionsInIn = height === 0 ? '' : `${height} x ${width} inches`
+    //Write to the 'gallery' div
+    const maxScansShown = 20
+    const myGallery = document.getElementById('gallery')
+    myGallery.innerHTML = ''
+    organizedScans.forEach((scannedImg, i) => {
+        //Get data of painting
+        const { title, partOfSeries, year, medium, paintedOn, height, width, fileName } = scannedImg
+        const mediaList = writeMediaList(medium)
+        const dimensionsInIn = height === 0 ? '' : `${height} x ${width} inches`
 
-    //Build and push the art div
-    const classes = i < 11 ? 'archived-art' : 'archived-art hidden'
-    const archivedArtDiv = `
-    <div class='${classes}'>
-      <img src='scans/${fileName}.jpeg' alt='${title}'>
-      <p class='copyrightP'>
-        <span class='myTitle'> ${title} </span> © ${year} <br>
-        ${mediaList} on <br>
-        ${paintedOn} <br>
-        ${dimensionsInIn}
-      </p>
-    </div>`
-    myGallery.innerHTML += archivedArtDiv
+        //Build and push the art div
+        const classes = i < maxScansShown ? 'archived-art' : 'archived-art hidden'
+        const archivedArtDiv = `
+        <div class='${classes}'>
+            <img src='scans/${fileName}.jpeg' alt='${title}'>
+            <p class='copyrightP'>
+            <span class='myTitle'> ${title} </span> © ${year} <br>
+            ${mediaList} on <br>
+            ${paintedOn} <br>
+            ${dimensionsInIn}
+            </p>
+        </div>`
+        myGallery.innerHTML += archivedArtDiv
 
-  })
-  //Add button
+    })
+    //Add button
     const loadingBtn = document.getElementById('loading-btn')
-  if (organizedScans.length < 11) {
-    loadingBtn.classList.add('hidden')
-  } else {
-    loadingBtn.classList.remove('hidden')
-  }
+    if (organizedScans.length < maxScansShown) {
+        loadingBtn.classList.add('hidden')
+    } else {
+        loadingBtn.classList.remove('hidden')
+    }
 }
 function loadMoreArt(startIndx) {
-    //Reveal the divs with class 'archived-art' and index startIndx to startIndx+10
+    //Reveal the divs with class 'archived-art' and index startIndx to startIndx+20
     const artDivs = document.getElementsByClassName('archived-art')
-    const endIndx = startIndx + 10
+    const endIndx = startIndx + 20
     for (let i = startIndx; i < endIndx; i++) {
         artDivs[i].classList.remove('hidden')
     }
