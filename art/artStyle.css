@@ -1,13 +1,11 @@
 /*
 Color scheme:
 *Dark blue #0d4771
-*Pale Blue #445881
+*Pale Blue #445881 and pale version of it: #4458814f
 *Purple #7b6992
 *Pink #b17aa2
  white
- lightgray
  darkgray
-
 */
 
 /* General */
@@ -146,7 +144,7 @@ img {
     display: block;
     text-align: left;
   }
-  .topnav.responsive #catalogue-link {
+  .topnav.responsive #portfolio-link {
     margin-top: 48px;
   }
 }
@@ -193,15 +191,17 @@ img {
   }
 }
 
-/* Section 2: Catalogue */
-#catalogue-content .page-intro {
+/* Section 2: Porfolio */
+#portfolio-content .page-intro {
   margin-top: 50px;
 }
 .collection-title {
   border-radius: 15px;
-  display: inline;
+  display: inline-block;
   font-size: 20px;
   padding: 15px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .collection-title:hover {
   background-color: #7b6992;
@@ -211,12 +211,17 @@ img {
   background-color: #7b6992;
   color: white;
 }
-#catalog-list {
+.collection-tb {
+  border: 2px solid white;
+  height: 125px;
+  margin-top: 10px;
+}
+#portfolio-list {
   width: 100%
 }
 .catalog-card {
   display: block;
-  margin: 50px auto;
+  margin: 50px auto 85px auto;
   width: 80%;
 }
 .catalog-card::after {
@@ -249,6 +254,7 @@ img {
 @media screen and (max-width: 650px) {
   .collection-title {
     display: block;
+    margin: 10px 15px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -301,7 +307,7 @@ img {
   color: white;
 }
 .filter-btn, #open-filter-btn {
-  background-color: lightgray;
+  background-color: #4458814f;
   border: none;
   border-radius: 10px;
   color: #0d4771;
@@ -310,7 +316,7 @@ img {
   padding: 10px 7px;
 }
 #loading-btn {
-  background-color: lightgray;
+  background-color: #4458814f;
   border: none;
   border-radius: 10px;
   color: #0d4771;
@@ -326,7 +332,7 @@ img {
   margin-bottom: -150px;
 }
 .see-archive-btn, .close-archive-filter-btn {
-  background-color: lightgray;
+  background-color: #4458814f;
   border: none;
   border-radius: 10px;
   color: #0d4771;
@@ -399,7 +405,6 @@ td {
   font-size: 20px;
   margin-top: 30px;
 }
-
 /* Section 5: Blog */
 #blog-content {
   line-height: 1.5;
@@ -448,7 +453,7 @@ footer {
   background-color: #445881;
   color: white;
   margin-bottom: 0px;
-  margin-top: 180px;
+  margin-top: 130px;
   padding: 80px 10%;
 }
 footer a {
@@ -458,27 +463,33 @@ footer a {
 footer a:hover {
   color: white;
 }
+footer p {
+  margin-top: 50px;
+}
 #where-to-go-now {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
   margin-top: 50px;
 }
 .my-name {
   font-family: cursive;
+  font-size: 22px;
 }
 .go-here {
   width: 150px;
 }
 .nav-at-foot {
   display: block;
-  margin-bottom: 15px;
   font-size: 24px;
 }
 .contact-icon {
-  display: inline;
+  margin-top: 50px;
+}
+.contact-icon a {
   font-size: 35px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .l-icons {
   width: 30px;

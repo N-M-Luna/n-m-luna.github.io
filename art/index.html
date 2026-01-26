@@ -29,7 +29,7 @@
     <div id='myTopnav' class='topnav'>
         <a id='home-link' href='#' class='active' onclick='goHome()'><i class='fa-solid fa-house-chimney'></i></a>
         <p id='current-tab'> </p>
-        <a id='catalogue-link' href='#' class='nav-anchor' onclick='activate("catalogue-link"); openCollection("Space Babes");'>Artist Calatolgue</a>
+        <a id='portfolio-link' href='#' class='nav-anchor' onclick='activate("portfolio-link"); openCollection("Space Babes");'>Portfolio</a>
         <a id='archive-link'  href='#' class='nav-anchor' onclick='activate("archive-link"); openArchive();'>Archive</a>
         <a id='shop-link' href='#' class='nav-anchor' onclick='activate("shop-link"); openShop();'>Shop</a>
         <a id='blog-link' href='#' class='nav-anchor' onclick='activate("blog-link"); goBackToBlog();'>Blog</a>
@@ -140,18 +140,24 @@
         </div>
     </section> <!--End Home Content-->
 
-    <!------------ Start Catalogue Content ------------>
-    <section id='catalogue-content' class='hidden'>
+    <!------------ Start portfolio Content ------------>
+    <section id='portfolio-content' class='hidden'>
         <div class='page-intro'>
-            <div id='space-babes-btn' class='collection-title' onclick='openCollection("Space Babes")'>Space Babes Collection</div>
-            <div id='fantastique-btn' class='collection-title' onclick='openCollection("Fantastique")'>Fantastique Collection</div>
-            <div id='bold-ones-btn' class='collection-title' onclick='openCollection("Bold Ones")'>Bold Ones Collection</div>
+            <div id='space-babes-btn' class='collection-title' onclick='openCollection("Space Babes")'>
+                Space Babes Collection <br> <img class='collection-tb' src='scans/2022spaceBabe(Green).jpeg' alt='OG Space Babe (Green)''>
+            </div>
+            <div id='fantastique-btn' class='collection-title' onclick='openCollection("Fantastique")'>
+                Fantastique Collection <br> <img class='collection-tb' src='scans/2023inkbot.jpeg' alt='The Forest Scene'>
+            </div>
+            <div id='bold-ones-btn' class='collection-title' onclick='openCollection("Bold Ones")'>
+                Bold Ones Collection <br> <img class='collection-tb' src='scans/2023tattooedPinupNo3.jpeg' alt='Tattooed Pinup No. 3'>
+            </div>
             <p id='collection-intro'> </p>
         </div>
 
-        <div id='catalogue-list'> </div>
+        <div id='portfolio-list'> </div>
 
-    </section><!--End Catalogue Content-->
+    </section><!--End portfolio Content-->
 
     <!------------ Start Archive Content ------------>
     <section id='archive-content' class='hidden'>
@@ -384,7 +390,7 @@
             </div>
 
             <p class='custom-offer'><strong>Interested in a print that isn't here?</strong></p>
-            <p>You can order a print of anything in <a onclick='activate("catalogue-link", true); openCollection("Space Babes");'>the catalogue</a>. </p>
+            <p>You can order a print of anything in <a onclick='activate("portfolio-link", true); openCollection("Space Babes");'>the portfolio</a>. </p>
 
             <a href='https://artofnmluna.etsy.com/listing/4445709367/custom-art-print' target='_blank' class='shop-link'><button class='shop-btn custom-btn'>Place a custom order <i class="fas fa-external-link-alt"></i></button></a>
 
@@ -418,29 +424,25 @@
 
         <div id='where-to-go-now'>
             <div class='go-here'>
-                <p>Take me to:</p>
-                <a href='#' class='nav-at-foot' onclick='goHome(true)'>Home</a>
+                <p>?</p>
+                <a href='#' class='nav-at-foot' onclick='goHome(true)'>Home</a> <br>
                 <a href='#' class='nav-at-foot' onclick='activate("shop-link", true); openShop();'>Shop</a>
             </div>
             <div class='go-here'>
-                <p>Look at art.</p>
-                <a href='#' class='nav-at-foot' onclick='activate("catalogue-link", true); openCollection("Space Babes");'>Artist Calatolgue</a>
+                <p>Look at art</p>
+                <a href='#' class='nav-at-foot' onclick='activate("portfolio-link", true); openCollection("Space Babes");'>Portfolio</a> <br>
                 <a href='#' class='nav-at-foot' onclick='activate("archive-link", true); openArchive()'>Archive</a>
             </div>
             <div class='go-here'>
-                <p>Learn more.</p>
-                <a href='#' class='nav-at-foot' onclick='activate("about-link", true)'>About</a>
+                <p>Learn more</p>
+                <a href='#' class='nav-at-foot' onclick='activate("about-link", true)'>About</a> <br>
                 <a href='#' class='nav-at-foot' onclick='activate("blog-link", true)'>Blog</a>
             </div>
-            <div class='go-here'>
-                <p>Connect.</p>
-                <a href='#' class='nav-at-foot' onclick='activate("contact-link", true)'>Contact</a>
-                <div class='contact-icon'>
-                    <a href='mailto:art.of.n.m.luna@gmail.com' traget='_blank'><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <div class='contact-icon'><a href='https://www.instagram.com/some.crafty.cat/' target='_blank'><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
+        </div>
+
+        <div class='contact-icon'>
+            <a href='mailto:art.of.n.m.luna@gmail.com' target='_blank'><i class="fa-solid fa-envelope"></i></a>
+            <a href='https://www.instagram.com/some.crafty.cat/' target='_blank'><i class="fa-brands fa-instagram"></i></a>
         </div>
 
         <p>All works here are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' target='_blank'>Creative Commons</a>.</p>

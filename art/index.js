@@ -228,7 +228,7 @@ const scansCatalogue = [
         height: 6,
         width: 4,
         tags: ['cat', 'greeting card', 'hand-lettering'],
-        fileName: 'carCardNo1'
+        fileName: 'catCardNo1'
     },
     {title: 'Cat Card No. 2',
         partOfSeries: 'Cat Cards',
@@ -238,7 +238,7 @@ const scansCatalogue = [
         height: 6,
         width: 4,
         tags: ['cat', 'greeting card', 'hand-lettering'],
-        fileName: 'carCardNo2'
+        fileName: 'catCardNo2'
     },
     {title: 'Cat Card No. 3',
         partOfSeries: 'Cat Cards',
@@ -248,7 +248,7 @@ const scansCatalogue = [
         height: 6,
         width: 4,
         tags: ['cat', 'greeting card', 'hand-lettering'],
-        fileName: 'carCardNo3'
+        fileName: 'catCardNo3'
     },
     {title: 'Cat Card No. 4',
         partOfSeries: 'Cat Cards',
@@ -258,7 +258,7 @@ const scansCatalogue = [
         height: 6,
         width: 4,
         tags: ['cat', 'greeting card', 'hand-lettering'],
-        fileName: 'carCardNo4'
+        fileName: 'catCardNo4'
     },
     {title: 'Cat Card No. 5',
         partOfSeries: 'Cat Cards',
@@ -268,7 +268,7 @@ const scansCatalogue = [
         height: 6,
         width: 4,
         tags: ['cat', 'greeting card', 'hand-lettering'],
-        fileName: 'carCardNo5'
+        fileName: 'catCardNo5'
     },
     {title: 'Chaotic Neutral',
         partOfSeries: '',
@@ -1772,12 +1772,12 @@ function loadMoreArt(startIndx) {
     //Reveal the divs with class 'archived-art' and index startIndx to startIndx+20
     const artDivs = document.getElementsByClassName('archived-art')
     const endIndx = startIndx + 20
-    for (let i = startIndx; i < endIndx; i++) {
+    for (let i = startIndx; (i < endIndx) && (i < artDivs.length); i++) {
         artDivs[i].classList.remove('hidden')
     }
     //Update button
     const loadingBtn = document.getElementById('loading-btn')
-    if (endIndx < artDivs.length) {
+    if (endIndx <= artDivs.length) {
         loadingBtn.setAttribute('onClick', `loadMoreArt(${endIndx})`)
     } else {
         loadingBtn.classList.add('hidden')
@@ -1803,7 +1803,7 @@ function activateBtn(indx) {
     filterBtns[indx].classList.add('filtered')
 }
 
-//Artist Catalogue
+//Portfolio (prev. Artist Catalogue)
 const collectionsCatalogue = {
     'Space Babes': {
         intro: 'Mid-century science fiction meets pinups',
@@ -1825,12 +1825,12 @@ const collectionsCatalogue = {
         intro: 'A place for the whimsical, fantastic, or otherwise odd',
         files: [//4 watercolors, 1 ink, 3 watercolors + ink outline
             '2023theForestScene',
-            '2023zenAndTheArtOfRobotMaintenance',
             '2023theRobotTrainStationScene',
             '2023royalty',
-            '2023theDancingOnionheadsScene',
             '2024theFates',
             '2023inkbot',
+            '2023theDancingOnionheadsScene',
+            '2023zenAndTheArtOfRobotMaintenance',
             '2024merfolk',
         ]
     },
@@ -1872,9 +1872,9 @@ function openCollection(collectionName) {
 
     //Fill in the div with ID catalogue-list with the files of activeCollection
     const fileNames = activeCollection.files
-    const collectionScans = scansCatalogue.filter(scanItem => fileNames.includes(scanItem.fileName)) //TODO display them in a specific order
-    const collectionList = document.getElementById('catalogue-list')
-    let collectionContent = '' // fileNames.join(', ')
+    const collectionScans = fileNames.map(fName => scansCatalogue.find(s => s.fileName === fName))
+    const collectionList = document.getElementById('portfolio-list')
+    let collectionContent = ''
     collectionScans.forEach(scanObj => {
         collectionContent += `<div class='catalog-card'>
                 <img src='scans/${scanObj.fileName}.jpeg' alt='${scanObj.title}'>
@@ -1882,6 +1882,18 @@ function openCollection(collectionName) {
             </div>`
     })
     collectionList.innerHTML = collectionContent
+
+    //Add a way to navigate to the other two collections from the bottom of the page
+    const collectionNames = ['Space Babes', 'Fantastique', 'Bold Ones']
+    const otherCollections = collectionNames.filter(cName => cName !== collectionName)
+    collectionList.innerHTML += `<hr>
+    <div>
+    <p>View the other collections:</p>
+    ${otherCollections.map(n => `<div class='collection-title' onclick='openCollection("${n}")'>${n} Collection</div>`).join(' ')}
+    </div>`
+
+    //Sroll to the intro
+    collectionIntroSpace.scrollIntoView()
 }
 
 //Blog
