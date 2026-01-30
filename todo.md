@@ -1,0 +1,3 @@
+- Space out archived paintings horizontally
+- Behavior of 'see all' in filters (after you've pressed 'show 20 more')
+- Subheader in the blog pages should not be smaller than the body.
