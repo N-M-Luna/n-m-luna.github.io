@@ -1650,6 +1650,16 @@ const scansCatalogue = [
         tags: [],
         fileName: '2023theWomanInTheBlueDress'
     },
+    {title: 'Woman in Blue',
+        partOfSeries: '',
+        year: 2025,
+        medium: ['ink'],
+        paintedOn: 'Cotton paper with vellum finish',
+        height: 12,
+        width: 8.5,
+        tags: [],
+        fileName: '2025womanInBlue'
+    },
     {title: 'Yin Yang Cats',
         partOfSeries: '',
         year: 2020,
