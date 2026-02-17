@@ -4,33 +4,28 @@ a {
   color: teal;
   text-decoration: none;
 }
-
 a:hover {
   color: teal;
   text-decoration: underline;
 }
-
-.section {
-  margin: auto;
-  width: 75%;
-}
-
 hr {
   color: teal;
   margin: 45px auto;
   width: 75%;
 }
 
-.end-of-section {
-  padding-bottom: 20px;
-}
-
-/* Section headings*/
+/* Sections */
 h3 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
+.section {
+  margin: auto;
+  width: 75%;
+}
+.end-of-section {
+  padding-bottom: 20px;
+}
 
 /* Headline Section */
 .profile-pic {
@@ -46,7 +41,7 @@ h3 {
 .headline-section {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 150px;
+  padding-top: 100px;
   width: 40%;
 }
 @media (max-width: 700px) {
@@ -55,20 +50,16 @@ h3 {
   }
 }
 
-
 /* Experience Section */
-
 h5 {
   padding-top: 40px;
 }
 
-
 /* Contact Section */
-
 .contact-menu {
   text-align: center;
+  padding-bottom: 100px;
 }
-
 .contact-menu i {
     font-size: 25px;
 }
