@@ -1,0 +1,24 @@
+/*
+Color palatte
+
+Dark green 7DA78C
+Mid Green C2D099
+Light Green E6EEC9
+
+Blue Green 35858E
+*/
+
+/*
+Alt palatte
+
+Dark red 6E1A37
+Bright red AE2448
+Teal 72BAA9
+Light Green D5E7B5
+*/
+body {
+    text-align: center;
+}
+#header-div {
+    border: 1px solid #35858E;
+}
