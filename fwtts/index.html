@@ -23,9 +23,42 @@
 <body>
     <!-- <div id='header-div'></div> -->
 
-    <img id='logo-img' src='FWTTS_logo_color.png' alt="For Whom The Tea Spills Logo">
+    <img id='logo-img' onclick='closeTabs()' src='FWTTS_logo_color.png' alt="For Whom The Tea Spills Logo">
 
-    <p></p>
+    <div id='main-menu-div'>
+      <p><button id='shop-btn' class='tab-btn' onclick='openTab("shop")'>Shop</button></p>
+      <p><button id='about-btn' class='tab-btn' onclick='openTab("about")'>About</button></p>
+      <p><button id='contact-btn' class='tab-btn' onclick='openTab("contact")'>Contact</button></p>
+    </div>
+
+    <div id='shop-tab' class='tab-div hidden'>
+      <p>This is what I sell.</p>
+      <p>This is where it comes from, how I prepare it, and how to get it.</p>
+    </div>
+
+    <div id='about-tab' class='tab-div hidden'>
+      <p>This is a little bit about me and my garden.</p>
+    </div>
+
+    <div id='contact-tab' class='tab-div hidden'>
+      <p>This is my contact info. </p>
+      <p class='e-address'>email @ domain</p>
+    </div>
+
+    <footer>
+      <p>
+        For Whom The Tea Spills <br>
+        Home kitchen at <br>
+        123 Sugar Lane <br>
+        Candy Land, CA <br>
+        0000XX
+      </p>
+
+      <p>
+        Permit and License Number xxxxxxxx <br>
+        Issued by So and so
+      </p>
+    </footer>
 
 </body>
 <script src='https://kit.fontawesome.com/5721503876.js' crossorigin='anonymous'></script>

@@ -17,8 +17,43 @@ Teal 72BAA9
 Light Green D5E7B5
 */
 body {
+    margin: 0px;
+    padding: 0px;
     text-align: center;
 }
 #header-div {
     border: 1px solid #35858E;
+}
+#logo-img {
+    width: 75%;
+    max-width: 300px;
+}
+.tab-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    font-size: 20px;
+    width: 150px;
+}
+.tab-btn:hover {
+    border: 1px solid #7DA78C;
+}
+.active-tab-btn {
+    border-color: #7DA78C;
+}
+.tab-div {
+    margin: 50px 0px;
+    max-width: 1200px;
+    padding: 15px 5%;
+}
+.hidden {
+    display: none;
+}
+.e-address {
+    font-family: monospace;
+}
+footer {
+    background-color: #7DA78C;
+    color: white;
+    padding: 50px;
+    text-align: left;
 }
