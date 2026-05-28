@@ -457,10 +457,6 @@ td {
   color: darkgray;
   font-size: 11px;
 }
-iframe {
-  height: 315px;
-  width: 560px;
-}
 
 /* Section 6: About
 Images use the same classes as for Section 1: Home */
