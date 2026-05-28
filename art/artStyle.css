@@ -431,10 +431,36 @@ td {
 .blog-post p {
   font-size: 20px;
 }
+.blog-post .blog-post-subheading {
+  color: #7b6992;
+  font-size: 24px;
+}
+.youtube-vid p {
+  color: darkgray;
+  font-size: 11px;
+}
+.pic-placeholder {
+  border: 1px solid #445881;
+  height: 300px;
+  margin: 20px auto;
+  width: 530px;
+}
+.yt-vid-placeholder {
+  background-color: #445881;
+  color: white;
+  height: 150px;
+  margin: 20px auto;
+  padding-top: 148px;
+  width: 530px;
+}
 .copyrightP {
   color: darkgray;
   font-size: 11px;
 }
+/* iframe {
+  height: 315px;
+  width: 420px;
+} */
 
 /* Section 6: About
 Images use the same classes as for Section 1: Home */
