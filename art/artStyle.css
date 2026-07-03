@@ -196,26 +196,8 @@ img {
 #portfolio-content .page-intro {
   margin-top: 50px;
 }
-.collection-title {
-  border-radius: 15px;
-  display: inline-block;
-  font-size: 20px;
-  padding: 15px 10px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-.collection-title:hover {
-  background-color: #7b6992;
-  color: white;
-}
-.collection-title.active {
-  background-color: #7b6992;
-  color: white;
-}
-.collection-tb {
-  border: 2px solid white;
-  height: 125px;
-  margin-top: 10px;
+#collection-name {
+  font-size: 24px;
 }
 #portfolio-list {
   width: 100%
@@ -275,6 +257,27 @@ img {
     float: none;
     margin: 25px auto;
   }
+}
+.collection-title {
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.collection-title:hover {
+  background-color: #7b6992;
+  color: white;
+}
+.collection-title.active {
+  background-color: #7b6992;
+  color: white;
+}
+.collection-tb {
+  border: 2px solid white;
+  height: 125px;
+  margin-top: 10px;
 }
 
 /* Section 3: Archive */

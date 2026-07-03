@@ -1866,6 +1866,10 @@ const collectionsCatalogue = {
 }
 function openCollection(collectionName) {
 
+    //Display collection name
+    const collectionNameElem = document.getElementById('collection-name')
+    collectionNameElem.innerHTML = collectionName
+
     //Add .active class to div with ID: 'collection-name-btn'
     const collectionBtns = document.getElementsByClassName('collection-title')
     for(let i = 0; i < collectionBtns.length; i++) {
@@ -1892,15 +1896,6 @@ function openCollection(collectionName) {
             </div>`
     })
     collectionList.innerHTML = collectionContent
-
-    //Add a way to navigate to the other two collections from the bottom of the page
-    const collectionNames = ['Space Babes', 'Fantastique', 'Bold Ones']
-    const otherCollections = collectionNames.filter(cName => cName !== collectionName)
-    collectionList.innerHTML += `<hr>
-    <div>
-    <p>View the other collections:</p>
-    ${otherCollections.map(n => `<div class='collection-title' onclick='openCollection("${n}")'>${n} Collection</div>`).join(' ')}
-    </div>`
 
     //Sroll to the intro
     collectionIntroSpace.scrollIntoView()
