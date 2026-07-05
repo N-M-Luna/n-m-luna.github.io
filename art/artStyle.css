@@ -197,7 +197,7 @@ img {
   margin-top: 50px;
 }
 #collection-name {
-  font-size: 24px;
+  font-size: 26px;
 }
 #portfolio-list {
   width: 100%
@@ -371,7 +371,10 @@ tr:nth-child(even) {
 td {
   padding: 7px 5px;
 }
-#shop-gallery {
+.shop-heading {
+  font-size: 20px;
+}
+#shop-gallery, .shop-listing-list {
   align-items: baseline;
   display: flex;
   flex-wrap: wrap;

@@ -1898,7 +1898,7 @@ function openCollection(collectionName) {
     collectionList.innerHTML = collectionContent
 
     //Sroll to the intro
-    collectionIntroSpace.scrollIntoView()
+    collectionNameElem.scrollIntoView()
 }
 
 //Blog
@@ -2025,7 +2025,7 @@ const printsCatalogue = [
         title: 'Star Tease',
         year: 2023,
         prints4x6: 0,
-        prints5x7: 1,
+        prints5x7: -1,
         prints8x10: 0,
         prints9x12: 0,
         etsyURL: '4445570427/star-tease-art-print-signed',
@@ -2206,17 +2206,22 @@ function openShop() {
     let strigyfiedShop = ''
     printsCatalogue.forEach(item => {
         const priceStrss = []
-        if (item['prints4x6'] > 0) {
-            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>4 x 6 inch print available for \$20</a>`)
+        let avail
+        if (item['prints4x6'] !== 0) {
+            avail = item['prints4x6'] < 0 ? 'sold' : 'available'
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>4 x 6 inch print ${avail} for \$20</a>`)
         }
-        if (item['prints5x7'] > 0) {
-            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>5 x 7 inch print available for \$30</a>`)
+        if (item['prints5x7'] !==  0) {
+            avail = item['prints5x7'] < 0 ? 'sold' : 'available'
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>5 x 7 inch print ${avail} for \$30</a>`)
         }
-        if (item['prints8x10'] > 0) {
-            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>8 x 10 inch print available for \$70</a>`)
+        if (item['prints8x10'] !==  0) {
+            avail = item['prints8x10'] < 0 ? 'sold' : 'available'
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>8 x 10 inch print ${avail} for \$70</a>`)
         }
-        if (item['prints9x12'] > 0) {
-            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>9 x 12 inch print available for \$100</a>`)
+        if (item['prints9x12'] !==  0) {
+            avail = item['prints9x12'] < 0 ? 'sold' : 'available'
+            priceStrss.push(`<a href='https://www.etsy.com/listing/${item.etsyURL}' target='_blank'>9 x 12 inch print ${avail} for \$100</a>`)
         }
         let redBubPtag = ''
         if (item.redBubURL !== '#') {// ?ref=studio-promote
