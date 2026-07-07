@@ -401,6 +401,10 @@ td {
 .shop-listing img {
   width: 100%;
 }
+.shop-deets {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
 .shop-btn {
   background-color: #7b6992;
   border-radius: 15px;
