@@ -1,11 +1,21 @@
 body {
     background-color: #23596d;
-    color: #eeecdd;
     font-size: 18px;
+    line-height: 1.5;
     padding: 30px 5%;
     text-align: center;
 }
+#title-par {
+    color: #87BCC7;
+}
+#name-par {
+    color: #eeecdd;
+}
+#contact-par {
+    line-height: 3;
+}
 .big-font {
+    color: #eeecdd;
     font-size: 35px;
     font-weight: bold;
 }
@@ -16,7 +26,6 @@ body {
     color: #87BCC7;
 }
 p {
-    line-height: 1.5;
     margin: 50px auto 0px auto;
     max-width: 777px;
 }
@@ -31,9 +40,3 @@ a {
 a:hover, .eDirection:hover {
     color: #ed8772;
 }
-#name-par {
-    margin: 100px auto;
-}
-/* footer {
-    padding-top: 70px;
-} */
