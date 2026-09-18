@@ -372,6 +372,7 @@ td {
   padding: 7px 5px;
 }
 .shop-heading {
+  font-weight: 700;
   font-size: 25px;
 }
 #shop-gallery {
@@ -389,7 +390,7 @@ td {
   justify-content: center;
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 50px;
+  /* padding-top: 30px; */
 }
 /* .art-for-sale {} */
 .shop-listing {
@@ -402,8 +403,8 @@ td {
   width: 100%;
 }
 .shop-deets {
-  margin-bottom: 50px;
-  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 .shop-btn {
   background-color: #7b6992;
