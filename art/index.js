@@ -1078,7 +1078,7 @@ const scansCatalogue = [
         height: 12,
         width: 8.5,
         tags: [],
-        fileName: '2020plumaYtintero'
+        fileName: '2020plumaYTintero'
     },
     {title: 'Poison Flash',
         partOfSeries: 'Purple Flash Cards',
