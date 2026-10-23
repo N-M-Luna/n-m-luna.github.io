@@ -375,6 +375,27 @@ td {
   font-weight: 700;
   font-size: 25px;
 }
+.shop-name {
+  font-size: 20px;
+}
+.exhibition-div {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.exhibition-painting img {
+  max-width: 500px;
+  width: 80%;
+}
+.exhibition-painting p {
+  color: darkgray;
+}
+.gallery-divisions {
+  border-color: darkgray;
+  margin-top: 50px;
+}
 #shop-gallery {
   align-items: baseline;
   display: flex;
@@ -392,7 +413,6 @@ td {
   padding-right: 5%;
   /* padding-top: 30px; */
 }
-/* .art-for-sale {} */
 .shop-listing {
   margin: 30px 25px;
   padding: 5px;
@@ -426,6 +446,11 @@ td {
 .custom-offer {
   font-size: 20px;
   margin-top: 30px;
+}
+@media screen and (max-width: 900px) {
+  .exhibition-div {
+    flex-direction: column;
+  }
 }
 /* Section 5: Blog */
 #blog-content {
